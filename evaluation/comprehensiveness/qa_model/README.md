@@ -1,0 +1,1 @@
+For question answering model, we used a [deepset/roberta-base-squad2](https://huggingface.co/deepset/roberta-base-squad2) model from huggingface.
