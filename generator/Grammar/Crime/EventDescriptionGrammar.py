@@ -1,12 +1,22 @@
+from Attributes.DayAttribute import DayAttribute
+from Attributes.LocationAttribute import LocationAttribute
+from Fact_tree.Event import Event
+from Fact_tree.Fact import Fact
+from Fact_tree.Object import Object
 from generator.Grammar.Grammar import Grammar
 
-# TODO: add this!
+
 class EventDescriptionGrammar(Grammar):
     # Need to pass event to different grammar so that they all talk about the same event!
-    def __init__(self, tense: str, metadata: dict = None):
-        super().__init__(tense, metadata)
+    def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
+        super().__init__(tense, grammar_type, metadata)
 
     def define_grammar(self):
+        event = self.metadata['event']
+        time = self.metadata['time']
+        place = self.metadata['place']
+        place_mod = self.metadata['place_mod']
+
         grammar = """
           S -> NP VP [1.0]
           NP -> NDT NNN [1.0]
@@ -29,8 +39,7 @@ class EventDescriptionGrammar(Grammar):
         VIN -> 'after' [1.0]
         S2 -> NP2 VP2 [1.0]
         
-        NP2 -> NNNP NNNS [1.0]
-        NNNP -> '[CITY]' [1.0]
+        NP2 -> NNNS [1.0]
         NNNS -> 'police' [1.0]
         """
 
@@ -45,7 +54,7 @@ class EventDescriptionGrammar(Grammar):
                 VVBZ2 -> 'responds' [1.0]
               """
 
-        grammar += """
+        grammar += f"""
         VNP-TMP -> VNNP [1.0]
         VPP -> VIN2 VNP [1.0]
         VPP2 -> VIN3 VNP2 [1.0]
@@ -61,18 +70,50 @@ class EventDescriptionGrammar(Grammar):
         
         VPP4 -> VIN5 VNP5 [1.0]
         VIN5 -> 'of' [1.0]
-        VNP5 -> VDT VNN2 [1.0]
-        VNN2 -> '[EVENT-NOUN]' [1.0]
+        VNP5 -> VDT2 VNN2 [1.0]
+        VDT2 -> 'the' [1.0]
+        VNN2 -> '{event}' [1.0]
         
         VIN3 -> 'at' [1.0]
-        VNP2 -> '[LOCATION]' [1.0]
+        VNP2 -> VDT2 VJJ VNN3 [1.0]
+        VJJ -> '{place_mod}' [1.0]
+        VNN3 -> '{place}' [1.0]
         
         VIN4 -> 'at' [1.0]
-        VNP3 -> VCD VRB [1.0]
-        VCD -> '[TIME]' [1.0]
-        VRB -> 'p.m' [1.0]
+        VNP3 -> TIME [1.0]
+        TIME -> '{time[:-1] if time[-1] == '.' else time}' [1.0]
         """
-        # TIME needs to be late night
+
+        # The arrest came after police responded [DAY] to a report of a [EVENT-NOUN] at [LOCATION] at [TIME] p.m.
+        abstract_fact = Fact(
+            subj=Object(kind='arrest'),
+            event=Event(kind=self.stemmer.stem('came'),
+                        attrs={'subj': 'arrest',
+                               'clause_mod': Object(kind='after', attrs={
+                                                                         'clause': Fact(
+                                   subj=Object(kind='police'),
+                                   event=Event(
+                                       kind=self.stemmer.stem('responded' if self.tense == 'past' else 'responds'),
+                                       attrs={
+                                           'day': DayAttribute(),
+                                           'subj': 'police',
+                                           'phrase_mod': Object(kind='to', attrs={'obj': Object(kind='report', attrs={
+                                                                                  'phrase_mod': Object(kind='of',
+                                                                                                       attrs={
+                                                                                                           'obj': Object(
+                                                                                                               kind=event,
+                                                                                                               attrs={
+                                                                                                                   'place': Object(kind=place, attrs={'obj_mod': place_mod}),
+                                                                                                                   'time': time
+                                                                                                               }),
+                                                                                                       })})})
+
+                                       })
+                               )})}
+                        ))
+
+        self.grammar = grammar
+        self.abstract_fact = abstract_fact
 
         next_grammar = """
         S -> NP VP [1.0]

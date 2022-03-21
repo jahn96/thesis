@@ -16,7 +16,11 @@ class AgeAttribute(Attribute):
                     # if 'aged' in mod or 'year old' in mod:
                     age_mod = mod
                     if 'year old' in age_mod:
-                        age_mod = age_mod.replace('year old', 'year-old')
+                        age_mod = age_mod.replace('year old', 'years old')
+
+                    age_mod = age_mod.replace('-', ' ')
+                    if re.search(r'year\s', age_mod):
+                        age_mod = age_mod.replace('year', 'years')
 
                     age_match = re.match(r'\d+', age_mod)
                     if age_match:
@@ -27,7 +31,7 @@ class AgeAttribute(Attribute):
                     age_map[(age_mod, noun)] = noun_mod_occurrences[(mod, noun)]
 
         if not age_map:
-            age_map[('20-year-old', obj_lemma)] = 1
-            age_map[('25-year-old', obj_lemma)] = 1
-            age_map[('30-year-old', obj_lemma)] = 1
+            age_map[('20 years old', obj_lemma)] = 1
+            age_map[('25 years old', obj_lemma)] = 1
+            age_map[('30 years old', obj_lemma)] = 1
         return age_map

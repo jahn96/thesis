@@ -3,6 +3,7 @@ import nltk
 from nltk.parse.generate import generate
 
 from Attributes.Attribute import Attribute
+from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Node import Node
 from generator.FactGenerator import FactGenerator
@@ -48,8 +49,8 @@ class CrimeFactGenerator(FactGenerator):
 
         if isinstance(fact, Fact):
             grammar = self.traverse_fact(grammar, fact.subj, fact_table)
-            grammar = self.traverse_fact(grammar, fact.event, fact_table)
             grammar = self.traverse_fact(grammar, fact.obj, fact_table)
+            grammar = self.traverse_fact(grammar, fact.event, fact_table)
 
         elif type(fact) == list:
             for el in fact:
@@ -61,6 +62,10 @@ class CrimeFactGenerator(FactGenerator):
 
             if fact.neg:
                 fact_table_el['neg'] = fact.neg
+
+            # add passive
+            if isinstance(fact, Event) and fact.passive:
+                fact_table_el['passive'] = fact.passive
 
             obj = fact.kind
 
@@ -95,8 +100,8 @@ class CrimeFactGenerator(FactGenerator):
                 # clause_mod
                 elif isinstance(val, Fact):
                     grammar = self.traverse_fact(grammar, val.subj, fact_table)
-                    grammar = self.traverse_fact(grammar, val.event, fact_table)
                     grammar = self.traverse_fact(grammar, val.obj, fact_table)
+                    grammar = self.traverse_fact(grammar, val.event, fact_table)
 
                 elif isinstance(val, Attribute):
                     # get fact

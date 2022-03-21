@@ -221,11 +221,10 @@ class OutfitDescriptionGrammar(Grammar):
         else:
             # TODO: check if we need to have object kind as a part of phrase mod attribute in fact table
             # described as about 70-year old , wearing a zipped jacket with a red collar and cuffs , with skinny jeans and casual shoes.
-            verb = 'is described' if self.tense == 'present' else 'was described'
+            verb = 'described'
             fact = Fact(subj=Person(kind=self.__obj,
                                     attrs={'ordinal': self.num_ordinal_map[
                                         self.metadata['ordinal']] if 'ordinal' in self.metadata else None,
-                                           'age': AgeAttribute(),
                                            'clause_mod': Fact(
                                                event=Event(kind=self.stemmer.stem('wearing'),
                                                            attrs={'subj': self.__obj,
@@ -243,9 +242,10 @@ class OutfitDescriptionGrammar(Grammar):
                                                                                                 [Object(kind='collar',
                                                                                                         attrs={
                                                                                                             'obj_mod': Attribute()}),
-                                                                                                 Object(kind='cuffs')
+                                                                                                 Object(kind=self.lemmatizer.lemmatize('cuffs'))
                                                                                                  ]})}),
                                                     ])
                                            }),
-                        event=Event(kind=self.stemmer.stem(verb), attrs={'subj': self.__obj}))
+                        event=Event(kind=self.stemmer.stem(verb), passive=True, attrs={'subj': self.__obj, 'phrase_mod': Object(kind='as', attrs={'obj': AgeAttribute()})}))
             self.abstract_fact = fact
+

@@ -8,9 +8,6 @@ from Attributes.Attribute import Attribute
 
 class FactGenerator:
     def __init__(self, named_entities_dist, noun_mod_occurrences):
-        self.named_entities_dist = named_entities_dist
-        self.noun_mod_occurrences = noun_mod_occurrences
-
         self.nationality_ignore_words = ['islamist', 'sunni', 'kurdish', 'catholic', 'western', 'republican',
                                          'democrat',
                                          'democratic', 'shiite', 'muslim', 'non-muslim', 'islamic', 'christian',
@@ -20,6 +17,9 @@ class FactGenerator:
 
         self.gpe_ignore_words = ['Obama', 'Snowden', 'Twitter']
         self.GPE_COUNT_THRESHOLD = 100
+
+        self.named_entities_dist = self.preprocess_named_entities_dist(named_entities_dist)
+        self.noun_mod_occurrences = noun_mod_occurrences
 
     def generate_random_fact(self, obj: str, attr: Attribute, num_fact: int = 1):
         """
@@ -82,6 +82,9 @@ class FactGenerator:
 
                     if len(new_literal.split()) == 1 and 'U.S.'.lower() not in new_literal.lower() and 'D.C.'.lower() not in new_literal.lower():
                         new_literal = new_literal.capitalize()
+
+                    if new_literal == 'U.S.':
+                        new_literal = 'the U.S.'
 
                     if new_literal in preprocessed_named_entities_dist[named_entity]:
                         preprocessed_named_entities_dist[named_entity][new_literal] += count

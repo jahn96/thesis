@@ -6,9 +6,9 @@ if TYPE_CHECKING:
 
 
 class Fact:
-    def __init__(self, subj: Union[List[Union[Node, Fact]], Node, Fact] = None,
+    def __init__(self, subj: Union[List[Union[Node, Fact]], Node, Fact, str] = None,
                  event: Node = None,
-                 obj: Union[List[Union[Node, Fact]], Node, Fact] = None):
+                 obj: Union[List[Union[Node, Fact]], Node, Fact, str] = None):
         self.__subj = subj
         self.__event = event
         self.__obj = obj

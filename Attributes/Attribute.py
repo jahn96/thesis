@@ -21,7 +21,10 @@ class Attribute:
 
         for (mod, noun) in noun_mod_occurrences:
             if noun == obj_lemma and mod not in self.ignore_words.get(obj, []):
-                objs[(mod, noun)] = noun_mod_occurrences[(mod, noun)]
+                new_mod = mod
+                if len(mod.strip()) == 2:
+                    new_mod = mod.replace(' ', '-')
+                objs[(new_mod, noun)] = noun_mod_occurrences[(mod, noun)]
 
         if not objs:
             objs = {'red': 1, 'blue': 1, 'black': 1}

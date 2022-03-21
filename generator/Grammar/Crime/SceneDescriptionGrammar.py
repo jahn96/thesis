@@ -114,7 +114,8 @@ class SceneDescriptionGrammar(Grammar):
                     }
                 ),
                 event=Event(
-                    kind=self.stemmer.stem('was stabbed' if self.tense == 'past' else 'is stabbed'),
+                    kind=self.stemmer.stem('stabbed'),
+                    passive=True,
                     attrs={
                         'subj': 'soldier',
                         'phrase_mod': Object(kind='to', attrs={'obj': 'death'}),

@@ -1,8 +1,9 @@
 from abc import ABC, abstractmethod
-from typing import Tuple
+from typing import Tuple, Union
 
 from Fact_tree.Fact import Fact
 from nltk.stem import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 
 class Grammar(ABC):
     @abstractmethod
@@ -11,12 +12,13 @@ class Grammar(ABC):
             print('tense should be either present or past!')
             exit(-1)
 
-        self.__grammar = ''
+        self.__grammar: Union[str, list] = ''
         self.__tense = tense
         self.__metadata = metadata
         self.__grammar_type = grammar_type
         self.abstract_fact = None
         self.stemmer = PorterStemmer()
+        self.lemmatizer = WordNetLemmatizer()
 
     @property
     def tense(self):

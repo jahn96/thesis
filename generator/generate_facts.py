@@ -7,8 +7,10 @@ import pickle
 from nltk.stem import PorterStemmer
 
 from generator.CrimeFactGenerator import CrimeFactGenerator
+from generator.Grammar.Crime.EventDescriptionGrammar import EventDescriptionGrammar
 from generator.Grammar.Crime.EventHeadLineGrammar import EventHeadLineGrammar
 from generator.Grammar.Crime.EventSubHeadLineGrammar import EventSubHeadLineGrammar
+from generator.Grammar.Crime.FamilyQuoteGrammar import CrimeQuoteGrammar
 from generator.Grammar.Crime.OutfitDescriptionGrammar import OutfitDescriptionGrammar
 from generator.Grammar.Crime.PoliceReportGrammar import PoliceReportGrammar
 from generator.Grammar.Crime.SceneDescriptionGrammar import SceneDescriptionGrammar
@@ -137,6 +139,24 @@ def get_police_report_metadata(table, police_report_type=1):
                 metadata['city'] = v['location'] if 'location' in v else ''
     return metadata
 
+def get_basic_event_info(table):
+    """
+    It provides basic information about event such as place_mod, place, location, time, and day
+    :param table:
+    :return:
+    """
+    metadata = {'place': 'restaurant'}
+
+    for entry in table:
+        for k, v in entry.items():
+            if k == 'event':
+                metadata['day'] = v['day'] if 'day' in v else ''
+                metadata['time'] = v['time'] if 'time' in v else ''
+            elif k == 'object' and metadata and v['kind'] == metadata['place']:
+                metadata['place_mod'] = v['obj_mod']
+                metadata['location'] = v['location'] if 'location' in v else ''
+    return metadata
+
 
 def get_event_subhead_metadata(table):
     metadata = {}
@@ -159,6 +179,13 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
     # 2. Scene Description
     # 3. Suspect Description
     # 4. Police Report
+
+    # convert event in verb form to gerund
+    event_map = {
+        'mug': 'mugging',
+        'stab': 'stabbing'
+    }
+
     if template_id == 1:
         table = []
         texts = []
@@ -166,28 +193,39 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
         # even though the template structure is same, the content and interaction between grammars
         # (metadata passed to subsequent grammar) are different
         if grammar_type == 1:
-            event_metadata = {'event': random.choice(['mugged', 'stabbed'])}
+            event = random.choice(['mug', 'stab'])
+            event_metadata = {'event': event}
             police_metadata = {}
+            event_description_metadata = {'event': event_map[event]}
 
             event_head_line_grammar = EventHeadLineGrammar(tense, grammar_type, num_criminals, event_metadata)
             outfit_grammar = [OutfitDescriptionGrammar(tense, grammar_type, {'ordinal': i + 1}) for i in
                               range(num_criminals)]
             police_grammar = PoliceReportGrammar(tense, grammar_type)
 
-            template = [event_head_line_grammar, *outfit_grammar, police_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
+            event_description_grammar = EventDescriptionGrammar(tense, grammar_type,
+                                                                event_description_metadata)
+
+            quote_grammar = CrimeQuoteGrammar(tense, grammar_type, {})
+
+            template = [quote_grammar] #event_head_line_grammar, *outfit_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
 
             for grammar_obj in template:
                 if isinstance(grammar_obj, PoliceReportGrammar):
                     grammar_obj.metadata = police_metadata
+                elif isinstance(grammar_obj, EventDescriptionGrammar):
+                    grammar_obj.metadata = event_description_metadata
 
                 grammar_obj.define_grammar()
 
                 grammar = grammar_obj.grammar
                 abstract_fact = grammar_obj.abstract_fact
+
                 generator.generate_data(grammar, abstract_fact, texts, table)
 
                 if isinstance(grammar_obj, EventHeadLineGrammar):
                     police_metadata.update(get_police_report_metadata(table))
+                    event_description_metadata.update(get_basic_event_info(table))
 
         elif grammar_type == 2:
             num_soldiers = 1
@@ -201,11 +239,11 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
                 outfit_grammar.append(OutfitDescriptionGrammar(tense, grammar_type, {'ordinal': i + 1}, obj='tourist'))
 
             template = [
-                EventHeadLineGrammar(tense, grammar_type, num_criminals),
+                # EventHeadLineGrammar(tense, grammar_type, num_criminals),
                 SceneDescriptionGrammar(tense, grammar_type),
-                EventSubHeadLineGrammar(tense, grammar_type),
-                *outfit_grammar,
-                PoliceReportGrammar(tense, grammar_type)
+                # EventSubHeadLineGrammar(tense, grammar_type),
+                # *outfit_grammar,
+                # PoliceReportGrammar(tense, grammar_type)
             ]
 
             for grammar_obj in template:
@@ -255,7 +293,7 @@ def main():
     num_criminals = 3
 
     # grammar_type = random.choice(range(1, 3))
-    grammar_type = 2
+    grammar_type = 1
     template_id = 1
 
     # define_template
@@ -275,7 +313,7 @@ def main():
     # print(tables)
 
     for table in tables:
-        print(table)
+        print(str(table) + ',')
     # print(tables)
     # print((synthetic_data, tables))
 

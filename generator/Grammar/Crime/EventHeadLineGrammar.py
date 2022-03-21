@@ -82,9 +82,9 @@ class EventHeadLineGrammar(Grammar):
             """
 
             # A 13-year old female victim got knifepointed by 3 men at a steak restaurant in madrid at 7:26 a.m. on Monday.
-            verb = self.stemmer.stem('got' + ' ' + self.metadata['event'])
+            verb = self.stemmer.stem(self.metadata['event'])
             abstract_fact = Fact(obj=Person(kind='men', attrs={'count': self.__num_criminals}),
-                                 event=Event(kind=verb, attrs={
+                                 event=Event(kind=verb, passive=True, attrs={
                                      'subj': 'victim',
                                      'obj': 'men',
                                      'day': DayAttribute(),
@@ -176,7 +176,8 @@ class EventHeadLineGrammar(Grammar):
             # A Spanish tourist had been sentenced to 10 years in prison over the stabbing death of a Nigerian soldier during a nightclub brawl in the United States
             abstract_fact = Fact(
                 subj=Person(kind='tourist', attrs={'nationality': NationalityAttribute()}),
-                event=Event(kind=self.stemmer.stem('been sentenced'),
+                event=Event(kind=self.stemmer.stem('sentenced'),
+                            passive=True,
                             attrs={'subj': 'tourist',
                                    'phrase_mod': [Object(kind='to', attrs={'obj': Object(kind='years',
                                                                                          attrs={'count': 10,

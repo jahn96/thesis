@@ -6,6 +6,11 @@ from Fact_tree.Person import Person
 from generator.Grammar.Grammar import Grammar
 
 
+# TODO: add condolence from police
+"""
+"Our thoughts and prayers are with his family and also with all the families and our shooting victims as a result of this incident," Col. Bill Bryant of the Arkansas State Police told reporters.
+"""
+
 class PoliceReportGrammar(Grammar):
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
@@ -136,10 +141,12 @@ class PoliceReportGrammar(Grammar):
                                                                                                                           'location': city
                                                                                                                       }
                                                                                                                   ),
+                                                                                                                  'day': day,
                                                                                                               })}),
-                                                                                           'day': day}))}),
+                                                                                           }))}),
                                      event=Event(
-                                         kind=self.stemmer.stem('was taken' if self.tense == 'past' else 'is taken'),
+                                         kind=self.stemmer.stem('taken'),
+                                         passive=True,
                                          attrs={
                                              'phrase_mod': Object(kind='into', attrs={'obj': 'custody'}),
                                              'subj': 'man',
@@ -199,23 +206,24 @@ class PoliceReportGrammar(Grammar):
             abstract_fact = Fact(subj=Person(kind='police'),
                                  event=Event(kind=self.stemmer.stem('said'), attrs={'subj': 'police'}),
                                  obj=Fact(
-                                     subj=[Object(kind='facts', attrs={'clause_mod':
+                                     subj=[Object(kind='fact', attrs={'clause_mod':
                                          Fact(
                                              event=Event(kind=self.stemmer.stem('led up'),
-                                                         attrs={'subj': 'facts',
+                                                         attrs={'subj': 'fact',
                                                                 'phrase_mod': Object(kind='to',
                                                                                      attrs={
                                                                                          'obj': 'stabbing'})}))
                                      }), Object(kind='circumstances', attrs={'clause_mod':
                                          Fact(
                                              event=Event(kind=self.stemmer.stem('led up'),
-                                                         attrs={'subj': 'circumstances',
+                                                         attrs={'subj': 'circumstance',
                                                                 'phrase_mod': Object(kind='to',
                                                                                      attrs={
                                                                                          'obj': 'stabbing'})}))
                                      })],
-                                     event=Event(kind=self.stemmer.stem('being determined'),
-                                                 attrs={'subj': 'facts, circumstances', 'event_mod': 'still'}))
+                                     event=Event(kind=self.stemmer.stem('determined'),
+                                                 passive=True,
+                                                 attrs={'subj': 'fact, circumstance', 'event_mod': 'still'}))
                                  )
             self.grammar = grammar
             self.abstract_fact = abstract_fact
