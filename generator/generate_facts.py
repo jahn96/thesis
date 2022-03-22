@@ -7,6 +7,7 @@ import pickle
 from nltk.stem import PorterStemmer
 
 from generator.CrimeFactGenerator import CrimeFactGenerator
+from generator.Grammar.Crime.ClosingStatementGrammar import ClosingStatementGrammar
 from generator.Grammar.Crime.EventDescriptionGrammar import EventDescriptionGrammar
 from generator.Grammar.Crime.EventHeadLineGrammar import EventHeadLineGrammar
 from generator.Grammar.Crime.EventSubHeadLineGrammar import EventSubHeadLineGrammar
@@ -208,7 +209,8 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
 
             quote_grammar = CrimeQuoteGrammar(tense, grammar_type, {})
 
-            template = [quote_grammar] #event_head_line_grammar, *outfit_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
+            closing_grammar = ClosingStatementGrammar(tense, grammar_type, {})
+            template = [closing_grammar] #event_head_line_grammar, *outfit_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
 
             for grammar_obj in template:
                 if isinstance(grammar_obj, PoliceReportGrammar):
@@ -221,7 +223,15 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
                 grammar = grammar_obj.grammar
                 abstract_fact = grammar_obj.abstract_fact
 
-                generator.generate_data(grammar, abstract_fact, texts, table)
+                if type(grammar) == list:
+                    assert type(grammar) == type(abstract_fact)
+                    assert len(grammar) == len(abstract_fact)
+                    for i in range(len(grammar)):
+                        sub_grammar = grammar[i]
+                        sub_abs_fact = abstract_fact[i]
+                        generator.generate_data(sub_grammar, sub_abs_fact, texts, table)
+                else:
+                    generator.generate_data(grammar, abstract_fact, texts, table)
 
                 if isinstance(grammar_obj, EventHeadLineGrammar):
                     police_metadata.update(get_police_report_metadata(table))

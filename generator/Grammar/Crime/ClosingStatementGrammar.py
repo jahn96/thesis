@@ -7,8 +7,10 @@ Anyone with information is asked to contact authorities.
 """
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
+from Fact_tree.Modifier import Modifier
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
@@ -19,29 +21,29 @@ class ClosingStatementGrammar(Grammar):
     def define_grammar(self):
         # no arrests have been made
         arrest_grammar = """
-            S -> NP VP
-            NP -> NDT NNNS
+            S -> NP VP [1.0]
+            NP -> NDT NNNS [1.0]
         """
 
         if self.tense == 'present':
             arrest_grammar += """
-                VP -> VVBP VVP
-                VVBP -> 'have'
+                VP -> VVBP VVP [1.0]
+                VVBP -> 'have' [1.0]
             """
         elif self.tense == 'past':
             arrest_grammar += """
-                VP -> VVBD VVP
-                VVBD -> 'had'
+                VP -> VVBD VVP [1.0]
+                VVBD -> 'had' [1.0]
             """
 
         arrest_grammar += """
-            NDT -> 'No'
-            NNNS -> 'arrests'
-            VVBP -> 'have'
-            VVP -> VVBN VVP2
+            NDT -> 'No' [1.0]
+            NNNS -> 'arrests' [1.0]
+            VVBP -> 'have' [1.0]
+            VVP -> VVBN VVP2 [1.0]
             
-            VVBN -> 'been'
-            VVP2 -> 'made'
+            VVBN -> 'been' [1.0]
+            VVP2 -> 'made' [1.0]
         """
 
         arrest_abs_fact = Fact(
@@ -50,98 +52,99 @@ class ClosingStatementGrammar(Grammar):
         )
 
         investigation_grammar = """
-            S -> NP VP
-            NP -> NNP NPP
-            NNP -> NDT NNN
-            NPP -> NIN NNP2
-            NDT -> 'the'
-            NNN -> 'investigation'
-            NIN -> 'into'
-            NNP2 -> NDT NNN2
-            NNN2 -> 'shooting'
+            S -> NP VP [1.0]
+            NP -> NNP NPP [1.0]
+            NNP -> NDT NNN [1.0]
+            NPP -> NIN NNP2 [1.0]
+            NDT -> 'the' [1.0]
+            NNN -> 'investigation' [1.0]
+            NIN -> 'into' [1.0]
+            NNP2 -> NDT NNN2 [1.0]
+            NNN2 -> 'shooting' [1.0]
         """
 
         if self.tense == 'present':
             investigation_grammar += """
-                VP -> VVBZ VADJP COMMA VPP
-                VVBZ -> 'is'
+                VP -> VVBZ VADJP COMMA VPP [1.0]
+                VVBZ -> 'is' [1.0]
             """
         elif self.tense == 'past':
             investigation_grammar += """
-                VP -> VVBD VADJP COMMA VPP
-                VVBD -> 'was'
+                VP -> VVBD VADJP COMMA VPP [1.0]
+                VVBD -> 'was' [1.0]
             """
 
         investigation_grammar += """
-            VADJP -> VJJ
-            COMMA -> ','
-            VPP -> VVBG VPP2
+            VADJP -> VJJ [1.0]
+            COMMA -> ',' [1.0]
+            VPP -> VVBG VPP2 [1.0]
 
-            VJJ -> 'ongoing'
-            VVBG -> 'according'
-            VPP2 -> VIN VNP
+            VJJ -> 'ongoing' [1.0]
+            VVBG -> 'according' [1.0]
+            VPP2 -> VIN VNP [1.0]
 
-            VIN -> 'to'
-            VNP -> VNP2 VNN
+            VIN -> 'to' [1.0]
+            VNP -> VNP2 VNN [1.0]
 
-            VNP2 -> VDT VNN2 VPOS
-            VNN -> 'office'
-            VDT -> 'the'
-            VNN2 -> 'sheriff'
-            VPOS -> "'s"
+            VNP2 -> VDT VNN2 VPOS [1.0]
+            VNN -> 'office' [1.0]
+            VDT -> 'the' [1.0]
+            VNN2 -> 'sheriff' [1.0]
+            VPOS -> "'s" [1.0]
         """
 
         investigation_abs_fact = Fact(
-            subj=Object(kind='investigation', attrs={'phrase_mod': [Object(kind='into', attrs={'obj': 'shooting'}),
-                                                                    Object(kind='according to', attrs={'obj':
-                                                                                                           Object(
-                                                                                                               kind='office',
-                                                                                                               attrs={
-                                                                                                                   'poss': 'sheriff'})})],
-                                                     'adj_mod': 'ongoing'}),
+            subj=Object(kind='investigation', attrs={'phrase_mod': [Phrase(kind='into', attrs={'obj': 'shooting'}),
+                                                                    Phrase(kind='according to', attrs={'obj':
+                                                                        Object(
+                                                                            kind='office',
+                                                                            attrs={
+                                                                                'poss': 'sheriff'})})],
+                                                     'obj_mod': Modifier(kind='ongoing')}),
         )
 
         contact_grammar = """
-            S -> NP VP
-            NP -> NNP NPP
+            S -> NP VP [1.0]
+            NP -> NNP NPP [1.0]
             
-            NNP -> NNN
-            NPP -> NIN NNP2
-            NNN -> 'Anyone'
-            NIN -> 'with'
-            NNP2 -> NNN2
-            NNN2 -> 'information'
+            NNP -> NNN [1.0]
+            NPP -> NIN NNP2 [1.0]
+            NNN -> 'Anyone' [1.0]
+            NIN -> 'with' [1.0]
+            NNP2 -> NNN2 [1.0]
+            NNN2 -> 'information' [1.0]
         """
 
         if self.tense == 'present':
             contact_grammar += """
-                VP -> VVBZ VVP
-                VVBZ -> 'is'
+                VP -> VVBZ VVP [1.0]
+                VVBZ -> 'is' [1.0]
             """
         elif self.tense == 'past':
             contact_grammar += """
-                VP -> VVBD VVP
-                VVBD -> 'was'
+                VP -> VVBD VVP [1.0]
+                VVBD -> 'was' [1.0]
             """
 
         contact_grammar += """
-            VVP -> VVBN S2
+            VVP -> VVBN S2 [1.0]
             
-            VVBN -> 'asked'
-            S2 -> VP2
-            VP2 -> VTO VVP2
-            VTO -> 'to'
-            VVP2 -> VVB VNP
-            VVB -> 'contact'
-            VNP -> VDT VNNS
-            VDT -> 'the'
-            VNNS -> 'authorities'
+            VVBN -> 'asked' [1.0]
+            S2 -> VP2 [1.0]
+            VP2 -> VTO VVP2 [1.0]
+            VTO -> 'to' [1.0]
+            VVP2 -> VVB VNP [1.0]
+            VVB -> 'contact' [1.0]
+            VNP -> VDT VNNS [1.0]
+            VDT -> 'the' [1.0]
+            VNNS -> 'authorities' [1.0]
         """
 
         contact_abs_fact = Fact(
-            subj=Person(kind='anyone', attrs={'phrase_mod': Object(kind='with', attrs={'obj': 'information'})}),
-            event=Event(kind='asked', passive=True, attrs={'clause_comp': Event(kind='contact', attrs={'obj': 'authorities'})})
+            subj=Person(kind='anyone', attrs={'phrase_mod': Phrase(kind='with', attrs={'obj': 'information'})}),
+            event=Event(kind='asked', passive=True,
+                        attrs={'phrase_mod': Phrase(kind='to', attrs={'event': Event(kind='contact', attrs={'obj': 'authorities'})})})
         )
 
         self.grammar = [arrest_grammar, investigation_grammar, contact_grammar]
-        self.abstract_fact = []
+        self.abstract_fact = [arrest_abs_fact, investigation_abs_fact, contact_abs_fact]

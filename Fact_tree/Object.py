@@ -10,7 +10,8 @@ from Attributes.Attribute import Attribute
 class Object(Node):
     def __init__(self, kind: str, neg: bool = False,
                  attrs: Dict[str, Union[List, int, str, Node, Attribute, Fact]] = None):
-        super().__init__(kind, neg, attrs)
+        super().__init__(kind, attrs)
+        self.neg = neg
 
     def __repr__(self):
         return 'object'

@@ -1,4 +1,4 @@
-spacy
+spacy==3.2.3
 nltk
 tensorflow
 Cython==0.29.15

@@ -9,7 +9,7 @@ from Fact_tree.Base import Base
 
 
 class Node(Base):
-    def __init__(self, kind: str, neg: bool = False,
+    def __init__(self, kind: str,
                  attrs: Dict[str, Union[List, int, str, Node, Attribute, Fact]] = None):
         """
         Node in a fact tree
@@ -17,9 +17,8 @@ class Node(Base):
         :param attrs: attributes associated with this node
         :param kwargs: ??
         """
-        super().__init__(kind, neg, attrs)
+        super().__init__(kind, attrs)
         self.kind = kind
-        self.neg = neg
         self.attrs = attrs
 
     def get_attrs(self):

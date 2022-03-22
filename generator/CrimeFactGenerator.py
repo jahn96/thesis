@@ -60,7 +60,7 @@ class CrimeFactGenerator(FactGenerator):
             attrs = fact.attrs if fact.attrs else {}
             fact_table_el = {}
 
-            if fact.neg:
+            if hasattr(fact, 'neg') and fact.neg:
                 fact_table_el['neg'] = fact.neg
 
             # add passive
@@ -130,18 +130,34 @@ class CrimeFactGenerator(FactGenerator):
 
                         prep = val.kind
 
-                        # list
-                        if type(val.attrs['obj']) == list:
-                            objs = [obj.kind for obj in val.attrs['obj']]
-                            phrase_mod = prep + ' ' + ','.join(objs)
-                        # Node
-                        elif isinstance(val.attrs['obj'], Node):
-                            obj = val.attrs['obj'].kind
-                            phrase_mod = prep + ' ' + obj
-                        # Attribute
+                        # preposition + noun
+                        if 'obj' in val.attrs:
+                            # list
+                            if type(val.attrs['obj']) == list:
+                                objs = [obj.kind for obj in val.attrs['obj']]
+                                phrase_mod = prep + ' ' + ','.join(objs)
+                            # Node
+                            elif isinstance(val.attrs['obj'], Node):
+                                obj = val.attrs['obj'].kind
+                                phrase_mod = prep + ' ' + obj
+                            # Attribute
+                            else:
+                                obj = val.__getattribute__('obj')
+                                phrase_mod = prep + ' ' + obj
+                        # preposition + verb
                         else:
-                            obj = val.__getattribute__('obj')
-                            phrase_mod = prep + ' ' + obj
+                            # list
+                            if type(val.attrs['event']) == list:
+                                events = [event.kind for event in val.attrs['event']]
+                                phrase_mod = prep + ' ' + ','.join(events)
+                            # Node
+                            elif isinstance(val.attrs['event'], Node):
+                                event = val.attrs['event'].kind
+                                phrase_mod = prep + ' ' + event
+                            # Attribute
+                            else:
+                                event = val.__getattribute__('event')
+                                phrase_mod = prep + ' ' + event
 
                         setattr(fact, attr, phrase_mod)
 
