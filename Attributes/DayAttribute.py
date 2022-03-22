@@ -2,12 +2,16 @@ from Attributes.Attribute import Attribute
 
 
 class DayAttribute(Attribute):
+    """
+    Attribute that outputs day attribute
+    """
     def __init__(self):
         super().__init__()
         self.pattern = '[DAY]'
         self.day_facts = {}
 
     def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+        # to remove repetitive selection of DATE entity
         if self.day_facts:
             return self.day_facts
 

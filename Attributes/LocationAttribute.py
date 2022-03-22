@@ -2,6 +2,9 @@ from Attributes.Attribute import Attribute
 
 
 class LocationAttribute(Attribute):
+    """
+    Attribute that outputs location attribute
+    """
     def __init__(self):
         super().__init__()
         self.pattern = '[LOCATION]'

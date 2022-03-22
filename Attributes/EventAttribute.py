@@ -2,6 +2,10 @@ from Attributes.Attribute import Attribute
 
 
 class EventAttribute(Attribute):
+    """
+    Attribute that outputs event attribute
+    """
+
     def __init__(self):
         super().__init__()
         self.pattern = '[EVENT]'

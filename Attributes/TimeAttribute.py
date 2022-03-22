@@ -1,6 +1,9 @@
 from Attributes.Attribute import Attribute
 
 class TimeAttribute(Attribute):
+    """
+    Attribute that outputs time attribute
+    """
     def __init__(self):
         super().__init__()
         self.pattern = '[TIME]'

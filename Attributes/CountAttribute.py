@@ -2,6 +2,9 @@ from Attributes.Attribute import Attribute
 
 
 class CountAttribute(Attribute):
+    """
+    Attribute that outputs count attribute of an object
+    """
     def __init__(self):
         super().__init__()
         self.pattern = '[COUNT]'
@@ -14,6 +17,4 @@ class CountAttribute(Attribute):
             if noun == obj_lemma and mod.isnumeric():
                 objs[(mod, noun)] = noun_mod_occurrences[(mod, noun)]
 
-        if not objs:
-            objs = {}
         return objs
