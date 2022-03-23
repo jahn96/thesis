@@ -1,10 +1,6 @@
-import random
-
 from Attributes.AgeAttribute import AgeAttribute
 from Attributes.Attribute import Attribute
-from Attributes.CountAttribute import CountAttribute
 from Attributes.DayAttribute import DayAttribute
-from Attributes.EventAttribute import EventAttribute
 from Attributes.LocationAttribute import LocationAttribute
 from Attributes.NationalityAttribute import NationalityAttribute
 from Attributes.SexAttribute import SexAttribute
@@ -13,10 +9,14 @@ from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
 class EventHeadLineGrammar(Grammar):
+    """
+    Grammar that shows the headline of the crime event in an article
+    """
     def __init__(self, tense: str, grammar_type: int, num_criminals: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
         self.__num_criminals = num_criminals
@@ -179,19 +179,19 @@ class EventHeadLineGrammar(Grammar):
                 event=Event(kind=self.stemmer.stem('sentenced'),
                             passive=True,
                             attrs={'subj': 'tourist',
-                                   'phrase_mod': [Object(kind='to', attrs={'obj': Object(kind='years',
+                                   'phrase_mod': [Phrase(kind='to', attrs={'obj': Object(kind='years',
                                                                                          attrs={'count': 10,
                                                                                                 'place': 'prison'})}),
-                                                  Object(kind='over', attrs={'obj': Object(kind='death',
+                                                  Phrase(kind='over', attrs={'obj': Object(kind='death',
                                                                                            attrs={
                                                                                                'obj_mod': 'stabbing',
-                                                                                               'phrase_mod': Object(
+                                                                                               'phrase_mod': Phrase(
                                                                                                    kind='of',
                                                                                                    attrs={'obj': Person(
                                                                                                        kind='soldier',
                                                                                                        attrs={
                                                                                                            'nationality': NationalityAttribute()})})})}),
-                                                  Object(kind='during', attrs={'obj': Object(kind='nightclub brawl',
+                                                  Phrase(kind='during', attrs={'obj': Object(kind='nightclub brawl',
                                                                                              attrs={
                                                                                                  'location': LocationAttribute(),
                                                                                              })})]})

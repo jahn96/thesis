@@ -10,7 +10,7 @@ class MonthAttribute(Attribute):
         self.pattern = '[MONTH]'
         self.month_facts = {}
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         # to remove repetitive selection of DATE entity
         if self.month_facts:
             return self.month_facts
@@ -26,7 +26,7 @@ class MonthAttribute(Attribute):
 
         return month_facts
 
-    def __has_month(self, s):
+    def __has_month(self, s: str):
         months = ['January', 'February', 'March', 'April', 'May', 'June',
                   'July', 'August', 'September', 'October', 'November', 'December']
         for month in months:

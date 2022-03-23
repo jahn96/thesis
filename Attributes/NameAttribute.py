@@ -6,12 +6,12 @@ class NameAttribute(Attribute):
     """
     Attribute that outputs name attribute
     """
-    def __init__(self, ):
+    def __init__(self):
         super().__init__()
         self.pattern = '[NAME]'
         self.names_dict = {}
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         # to remove repetitive selection of PERSON entity
         if self.names_dict:
             return self.names_dict

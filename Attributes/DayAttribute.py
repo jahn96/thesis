@@ -10,7 +10,7 @@ class DayAttribute(Attribute):
         self.pattern = '[DAY]'
         self.day_facts = {}
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         # to remove repetitive selection of DATE entity
         if self.day_facts:
             return self.day_facts
@@ -25,7 +25,7 @@ class DayAttribute(Attribute):
         self.day_facts = day_facts
         return day_facts
 
-    def __has_day(self, s):
+    def __has_day(self, s: str):
         days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
         for day in days:
             if day.lower() == s.lower():

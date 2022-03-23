@@ -1,16 +1,21 @@
 from Attributes.AgeAttribute import AgeAttribute
 from Attributes.Attribute import Attribute
-from Attributes.LocationAttribute import LocationAttribute
 from Attributes.MonthAttribute import MonthAttribute
 from Attributes.NameAttribute import NameAttribute
+from Fact_tree.Clause import Clause
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
 class SceneDescriptionGrammar(Grammar):
+    """
+    Grammar that describes the scene where the event was happened
+    """
+
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
 
@@ -118,21 +123,22 @@ class SceneDescriptionGrammar(Grammar):
                     passive=True,
                     attrs={
                         'subj': 'soldier',
-                        'phrase_mod': Object(kind='to', attrs={'obj': 'death'}),
-                        'clause_mod': Object(kind='after', attrs={'verb': self.stemmer.stem('broke out' if self.tense == 'past' else 'breaks out'), 'clause': Fact(
-                            subj=Object(kind='fight'),
-                            event=Event(kind=self.stemmer.stem('broke out' if self.tense == 'past' else 'breaks out'), attrs={
-                                'subj': 'fight',
-                                'place': Object(kind='nightclub',
-                                                attrs={
-                                                    'place': Object(kind='resort',
-                                                                    attrs={
-                                                                        'obj_mod': Attribute()
-                                                                        })}),
-                                'month': Object(kind='', attrs={'kind': MonthAttribute(), 'obj_mod': 'last'})
-                            })
-                        )}
-                    )}
+                        'phrase_mod': Phrase(kind='to', attrs={'obj': 'death'}),
+                        'clause_mod': Clause(kind='after',
+                                             subj=Object(kind='fight'),
+                                             event=Event(kind=self.stemmer.stem(
+                                                 'broke out' if self.tense == 'past' else 'breaks out'), attrs={
+                                                 'subj': 'fight',
+                                                 'place': Object(kind='nightclub',
+                                                                 attrs={
+                                                                     'place': Object(kind='resort',
+                                                                                     attrs={
+                                                                                         'obj_mod': Attribute()
+                                                                                     })}),
+                                                 'month': Object(kind='',
+                                                                 attrs={'kind': MonthAttribute(), 'obj_mod': 'last'})
+                                             })
+                                             )}
                 )
             )
             self.grammar = crime_scene_grammar

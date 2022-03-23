@@ -1,11 +1,12 @@
 from abc import ABC, abstractmethod
-from typing import Tuple, Union
-
-from Fact_tree.Fact import Fact
+from typing import Union
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 
 class Grammar(ABC):
+    """
+    Grammar class
+    """
     @abstractmethod
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         if tense not in ['present', 'past']:

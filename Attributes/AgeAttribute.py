@@ -10,7 +10,7 @@ class AgeAttribute(Attribute):
         super().__init__()
         self.pattern = '[AGE]'
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         age_map = {}
         obj_lemma = self.lemmatizer.lemmatize(obj)
         for (mod, noun) in noun_mod_occurrences:

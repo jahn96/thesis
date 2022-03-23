@@ -9,6 +9,9 @@ from Fact_tree.Base import Base
 
 
 class Node(Base):
+    """
+    Node super class in a fact tree
+    """
     def __init__(self, kind: str,
                  attrs: Dict[str, Union[List, int, str, Node, Attribute, Fact]] = None):
         """
@@ -20,6 +23,9 @@ class Node(Base):
         super().__init__(kind, attrs)
         self.kind = kind
         self.attrs = attrs
+
+    def __repr__(self):
+        return 'node'
 
     def get_attrs(self):
         return vars(self)

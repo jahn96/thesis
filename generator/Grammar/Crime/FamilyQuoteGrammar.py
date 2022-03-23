@@ -17,6 +17,7 @@ from generator.Grammar.Grammar import Grammar
 
 class CrimeQuoteGrammar(Grammar):
     """
+    Grammar that defines the quote of a family member
     NOTE: crime quote grammar doesn't parse facts inside the quote !
     """
 

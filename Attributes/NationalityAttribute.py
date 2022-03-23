@@ -7,7 +7,7 @@ class NationalityAttribute(Attribute):
     Attribute that outputs nationality attribute
     """
 
-    def __init__(self, ):
+    def __init__(self):
         super().__init__()
         self.pattern = '[NATIONALITY]'
         self.nationality = {}
@@ -16,7 +16,7 @@ class NationalityAttribute(Attribute):
                                'democratic', 'shiite', 'muslim', 'non-muslim', 'islamic', 'christian', 'instagram',
                                'basque', 'buddhist', 'pro-russian', 'communist', 'southern']
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         # to remove repetitive selection of NORP entity
         if self.nationality:
             return self.nationality

@@ -10,7 +10,7 @@ class SexAttribute(Attribute):
         self.pattern = '[SEX]'
         self.sex_fact = {}
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         if self.sex_fact:
             return self.sex_fact
 

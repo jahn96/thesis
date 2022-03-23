@@ -1,21 +1,20 @@
 import spacy
-from spacy.tokens.doc import Doc
+from spacy.lang.en import Language
 # from nltk.stem import PorterStemmer
 from nltk.stem.lancaster import LancasterStemmer
 from nltk.stem import WordNetLemmatizer
 import nltk
 
-from evaluation.utils import update_tokenizer
+from evaluation.update_tokenizer import update_tokenizer
 
-ignore_phrases = ["the US state of "]
 
-def preprocess_summary(summary: str):
+def __preprocess_summary(summary: str, ignore_phrases: list):
     for ignore_phrase in ignore_phrases:
-      summary = summary.replace(ignore_phrase, '')
+        summary = summary.replace(ignore_phrase, '')
     return summary.replace('<n>', ' ')
 
 
-def extract_facts_from_summary(summary, nlp, stemmer, lemmatizer):
+def extract_facts_from_summary(summary: str, nlp: Language, stemmer: LancasterStemmer, lemmatizer: WordNetLemmatizer, ignore_phrases: list = []):
     noun_modifiers = {}
     obj_counter = {}
     subj_verb = {}
@@ -30,7 +29,7 @@ def extract_facts_from_summary(summary, nlp, stemmer, lemmatizer):
         'three': 3
     }
 
-    preprocessed_summ = preprocess_summary(summary.strip())
+    preprocessed_summ = __preprocess_summary(summary.strip(), ignore_phrases)
     doc = nlp(preprocessed_summ)
     doc = update_tokenizer(doc)
 
@@ -284,7 +283,7 @@ def extract_facts_from_summary(summary, nlp, stemmer, lemmatizer):
                     verb_stem = stemmer.stem(verb)
                     if preposition.text.lower() == 'as':
                         # get subj
-                        subj = subj_verb[verb_stem][0]
+                        subj = subj_verb[verb_stem][-1][0]
                         if subj in noun_modifiers:
                             noun_modifiers[subj].append([tok.text, False])
                         else:
@@ -376,8 +375,22 @@ def extract_facts_from_summary(summary, nlp, stemmer, lemmatizer):
     return noun_modifiers, obj_counter, subj_verb, verb_obj, noun_neg, event_neg, event_modifiers
 
 
+def combine_extracted_facts(noun_modifiers, obj_counter, subj_verb, verb_obj, noun_neg, event_neg, event_modifiers):
+    extracted_facts = {}
+
+    facts = [noun_modifiers, obj_counter, subj_verb, verb_obj, noun_neg, event_neg, event_modifiers]
+
+    for fact in facts:
+        for key in fact:
+            vals = fact[key]
+            if key in extracted_facts:
+                extracted_facts[key].extend(vals)
+            else:
+                extracted_facts[key] = vals.copy()
+    return extracted_facts
+
+
 if __name__ == '__main__':
-    # !python -m spacy download en_core_web_lg
     nlp = spacy.load('en_core_web_lg')
 
     # stemmer = PorterStemmer()
@@ -386,13 +399,11 @@ if __name__ == '__main__':
     nltk.download('wordnet')
     lemmatizer = WordNetLemmatizer()
 
+    ignore_phrases = ["the US state of "]
+
     # TODO: make sure the age is connected with hyphen (32-year-old) or 32 years old
     # TODO: clock should be pm (am) or p.m (a.m) (if it appears) in the middle of sentence
-    summary = """A 32-year-old female victim got knifepointed by 3 men at a best restaurant in haiti at 9:12 a.m. on Monday.<n>The first man had no description. The second man was described as about 22-year old.<n>The third man was described as about 30-year old."""
+    summary = """A 44 years old female victim got stabbed by 3 men at a Asian restaurant in New Jersey at 8 p.m. on Friday.<n>The first man was described as about 22 years old, wearing a salmon-colored jacket with a blue collar and cuffs.<n>The third man was described as about 26 years old, wearing a salmon-colored jacket with a blue collar and cuffs."""
 
-    # preprocess_summary
-    preprocessed_summ = preprocess_summary(summary)
-    doc = nlp(preprocessed_summ)
-
-    print(type(doc))
-
+    noun_modifiers, obj_counter, subj_verb, verb_obj, noun_neg, event_neg, event_modifiers = extract_facts_from_summary(summary, nlp, stemmer, lemmatizer, ignore_phrases)
+    print(noun_modifiers, obj_counter, subj_verb, verb_obj, noun_neg, event_neg, event_modifiers)

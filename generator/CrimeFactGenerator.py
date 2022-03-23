@@ -3,6 +3,7 @@ import nltk
 from nltk.parse.generate import generate
 
 from Attributes.Attribute import Attribute
+from Fact_tree.Clause import Clause
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Node import Node
@@ -10,6 +11,9 @@ from generator.FactGenerator import FactGenerator
 
 
 class CrimeFactGenerator(FactGenerator):
+    """
+    Generator that generates crime fact that would be used in grammar to generate a crime article
+    """
     def __init__(self, named_entities_dist, noun_mod_occurrences):
         super().__init__(named_entities_dist, noun_mod_occurrences)
 
@@ -98,6 +102,16 @@ class CrimeFactGenerator(FactGenerator):
                         fact_table_el[attr] = phrase_mods
 
                 # clause_mod
+                elif isinstance(val, Clause):
+                    # TODO: think about showing the relationship between main clause and subordinate clause
+                    #  For example: The arrest came after police responded Tuesday (after relationship between (arrest came) and (polilce responded)
+                    # prep = val.kind
+                    # fact_table_el[attr] = prep
+
+                    grammar = self.traverse_fact(grammar, val.subj, fact_table)
+                    grammar = self.traverse_fact(grammar, val.obj, fact_table)
+                    grammar = self.traverse_fact(grammar, val.event, fact_table)
+
                 elif isinstance(val, Fact):
                     grammar = self.traverse_fact(grammar, val.subj, fact_table)
                     grammar = self.traverse_fact(grammar, val.obj, fact_table)

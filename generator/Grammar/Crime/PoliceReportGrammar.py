@@ -1,8 +1,8 @@
-from Attributes.Attribute import Attribute
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
@@ -12,6 +12,9 @@ from generator.Grammar.Grammar import Grammar
 """
 
 class PoliceReportGrammar(Grammar):
+    """
+    Grammar that defines the police report of an event
+    """
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
 
@@ -125,10 +128,10 @@ class PoliceReportGrammar(Grammar):
                                  obj=Fact(
                                      subj=Person(kind='man',
                                                  attrs={
-                                                     'clause_mod': Fact(event=Event(kind=self.stemmer.stem('suspected'),
+                                                     'clause_rel': Fact(event=Event(kind=self.stemmer.stem('suspected'),
                                                                                     attrs={'subj': 'man',
                                                                                            'phrase_mod':
-                                                                                               Object(kind='in',
+                                                                                               Phrase(kind='in',
                                                                                                       attrs={'obj':
                                                                                                           Object(
                                                                                                               kind=event,
@@ -148,7 +151,7 @@ class PoliceReportGrammar(Grammar):
                                          kind=self.stemmer.stem('taken'),
                                          passive=True,
                                          attrs={
-                                             'phrase_mod': Object(kind='into', attrs={'obj': 'custody'}),
+                                             'phrase_mod': Phrase(kind='into', attrs={'obj': 'custody'}),
                                              'subj': 'man',
                                              'day': next_day})))
 
@@ -206,18 +209,18 @@ class PoliceReportGrammar(Grammar):
             abstract_fact = Fact(subj=Person(kind='police'),
                                  event=Event(kind=self.stemmer.stem('said'), attrs={'subj': 'police'}),
                                  obj=Fact(
-                                     subj=[Object(kind='fact', attrs={'clause_mod':
+                                     subj=[Object(kind='fact', attrs={'clause_rel':
                                          Fact(
                                              event=Event(kind=self.stemmer.stem('led up'),
                                                          attrs={'subj': 'fact',
-                                                                'phrase_mod': Object(kind='to',
+                                                                'phrase_mod': Phrase(kind='to',
                                                                                      attrs={
                                                                                          'obj': 'stabbing'})}))
-                                     }), Object(kind='circumstances', attrs={'clause_mod':
+                                     }), Object(kind='circumstances', attrs={'clause_rel':
                                          Fact(
                                              event=Event(kind=self.stemmer.stem('led up'),
                                                          attrs={'subj': 'circumstance',
-                                                                'phrase_mod': Object(kind='to',
+                                                                'phrase_mod': Phrase(kind='to',
                                                                                      attrs={
                                                                                          'obj': 'stabbing'})}))
                                      })],

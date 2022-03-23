@@ -8,5 +8,5 @@ class TimeAttribute(Attribute):
         super().__init__()
         self.pattern = '[TIME]'
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         return named_entities_dist['TIME']

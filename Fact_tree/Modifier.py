@@ -7,7 +7,7 @@ from Attributes.Attribute import Attribute
 
 class Modifier(Node):
     """
-    Object modifier
+    Object modifier node in a fact tree
     """
     def __init__(self, kind: str, attrs: Dict[str, Union[List, int, str, Node, Attribute, Fact]] = None):
         super().__init__(kind, attrs)

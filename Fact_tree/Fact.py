@@ -6,12 +6,18 @@ if TYPE_CHECKING:
 
 
 class Fact:
+    """
+    Fact node in a fact tree
+    """
     def __init__(self, subj: Union[List[Union[Node, Fact]], Node, Fact, str] = None,
                  event: Node = None,
                  obj: Union[List[Union[Node, Fact]], Node, Fact, str] = None):
         self.__subj = subj
         self.__event = event
         self.__obj = obj
+
+    def __repr__(self):
+        return 'fact'
 
     @property
     def subj(self):

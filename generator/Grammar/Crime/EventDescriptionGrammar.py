@@ -1,12 +1,17 @@
 from Attributes.DayAttribute import DayAttribute
-from Attributes.LocationAttribute import LocationAttribute
+from Fact_tree.Clause import Clause
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
 class EventDescriptionGrammar(Grammar):
+    """
+    Grammar that describes the crime event
+    """
+
     # Need to pass event to different grammar so that they all talk about the same event!
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
@@ -88,29 +93,35 @@ class EventDescriptionGrammar(Grammar):
         abstract_fact = Fact(
             subj=Object(kind='arrest'),
             event=Event(kind=self.stemmer.stem('came'),
-                        attrs={'subj': 'arrest',
-                               'clause_mod': Object(kind='after', attrs={
-                                                                         'clause': Fact(
-                                   subj=Object(kind='police'),
-                                   event=Event(
-                                       kind=self.stemmer.stem('responded' if self.tense == 'past' else 'responds'),
-                                       attrs={
-                                           'day': DayAttribute(),
-                                           'subj': 'police',
-                                           'phrase_mod': Object(kind='to', attrs={'obj': Object(kind='report', attrs={
-                                                                                  'phrase_mod': Object(kind='of',
-                                                                                                       attrs={
-                                                                                                           'obj': Object(
-                                                                                                               kind=event,
-                                                                                                               attrs={
-                                                                                                                   'place': Object(kind=place, attrs={'obj_mod': place_mod}),
-                                                                                                                   'time': time
-                                                                                                               }),
-                                                                                                       })})})
+                        attrs={'subj': Object(kind='arrest'),
+                               'clause_mod': Clause(kind='after',
+                                                    subj=Object(kind='police'),
+                                                    event=Event(
+                                                        kind=self.stemmer.stem(
+                                                            'responded' if self.tense == 'past' else 'responds'),
+                                                        attrs={
+                                                            'day': DayAttribute(),
+                                                            'subj': 'police',
+                                                            'phrase_mod': Phrase(kind='to',
+                                                                                 attrs={'obj': Object(kind='report',
+                                                                                                      attrs={
+                                                                                                          'phrase_mod': Phrase(
+                                                                                                              kind='of',
+                                                                                                              attrs={
+                                                                                                                  'obj': Object(
+                                                                                                                      kind=event,
+                                                                                                                      attrs={
+                                                                                                                          'place': Object(
+                                                                                                                              kind=place,
+                                                                                                                              attrs={
+                                                                                                                                  'obj_mod': place_mod}),
+                                                                                                                          'time': time
+                                                                                                                      }),
+                                                                                                              })})})
 
-                                       })
-                               )})}
-                        ))
+                                                        })
+                                                    )})
+        )
 
         self.grammar = grammar
         self.abstract_fact = abstract_fact

@@ -15,6 +15,9 @@ from generator.Grammar.Grammar import Grammar
 
 
 class ClosingStatementGrammar(Grammar):
+    """
+    Grammar that outputs the closing statement of a crime article
+    """
     def __init__(self, tense, grammar_type, metadata):
         super().__init__(tense, grammar_type, metadata)
 

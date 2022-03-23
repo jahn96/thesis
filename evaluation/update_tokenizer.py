@@ -1,3 +1,7 @@
+"""
+Functions to update Spacy nlp tokenizer for summary evaluation
+"""
+
 def __check_btw_ends(idx, compound_indices):
     for compound_idx in compound_indices:
         if idx > compound_idx[0] and idx < compound_idx[1]:
@@ -11,7 +15,6 @@ def __can_extend_compound(idx, compound_indices):
         if idx == compound_idx[1]:
             return i
     return -1
-
 
 # compounds
 def __get_compounds(doc):

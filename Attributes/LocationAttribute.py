@@ -9,6 +9,6 @@ class LocationAttribute(Attribute):
         super().__init__()
         self.pattern = '[LOCATION]'
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         return named_entities_dist['GPE']
 

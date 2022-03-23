@@ -210,7 +210,7 @@ def create_template(generator, template_id, tense, grammar_type, num_criminals):
             quote_grammar = CrimeQuoteGrammar(tense, grammar_type, {})
 
             closing_grammar = ClosingStatementGrammar(tense, grammar_type, {})
-            template = [closing_grammar] #event_head_line_grammar, *outfit_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
+            template = [event_head_line_grammar, event_description_grammar] #event_head_line_grammar, *outfit_grammar] # event_head_line_grammar, *outfit_grammar, police_grammar]
 
             for grammar_obj in template:
                 if isinstance(grammar_obj, PoliceReportGrammar):
@@ -303,7 +303,7 @@ def main():
     num_criminals = 3
 
     # grammar_type = random.choice(range(1, 3))
-    grammar_type = 1
+    grammar_type = 2
     template_id = 1
 
     # define_template

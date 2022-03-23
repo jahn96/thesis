@@ -7,6 +7,9 @@ from Attributes.Attribute import Attribute
 
 
 class FactGenerator:
+    """
+    Fact generator class
+    """
     def __init__(self, named_entities_dist, noun_mod_occurrences):
         self.nationality_ignore_words = ['islamist', 'sunni', 'kurdish', 'catholic', 'western', 'republican',
                                          'democrat',

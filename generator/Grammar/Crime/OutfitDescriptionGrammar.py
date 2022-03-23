@@ -6,6 +6,7 @@ from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
@@ -225,11 +226,12 @@ class OutfitDescriptionGrammar(Grammar):
             fact = Fact(subj=Person(kind=self.__obj,
                                     attrs={'ordinal': self.num_ordinal_map[
                                         self.metadata['ordinal']] if 'ordinal' in self.metadata else None,
-                                           'clause_mod': Fact(
+                                           'age': AgeAttribute(),
+                                           'clause_comp': Fact(
                                                event=Event(kind=self.stemmer.stem('wearing'),
                                                            attrs={'subj': self.__obj,
                                                                   'obj': 'jacket',
-                                                                  'phrase_mod': Object(kind='with', attrs={'obj': [
+                                                                  'phrase_mod': Phrase(kind='with', attrs={'obj': [
                                                                       Object(kind='jeans',
                                                                              attrs={'obj_mod': Attribute()}),
                                                                       Object(kind='shoes',
@@ -238,7 +240,7 @@ class OutfitDescriptionGrammar(Grammar):
                                                                   ]})}),
                                                obj=[Object(kind='jacket', attrs={
                                                    'obj_mod': Attribute(),
-                                                   'phrase_mod': Object(kind='with', attrs={'obj':
+                                                   'phrase_mod': Phrase(kind='with', attrs={'obj':
                                                                                                 [Object(kind='collar',
                                                                                                         attrs={
                                                                                                             'obj_mod': Attribute()}),
@@ -246,6 +248,6 @@ class OutfitDescriptionGrammar(Grammar):
                                                                                                  ]})}),
                                                     ])
                                            }),
-                        event=Event(kind=self.stemmer.stem(verb), passive=True, attrs={'subj': self.__obj, 'phrase_mod': Object(kind='as', attrs={'obj': AgeAttribute()})}))
+                        event=Event(kind=self.stemmer.stem(verb), passive=True, attrs={'subj': self.__obj})) #, 'phrase_mod': Object(kind='as', attrs={'obj': AgeAttribute()})}))
             self.abstract_fact = fact
 

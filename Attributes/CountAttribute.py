@@ -9,7 +9,7 @@ class CountAttribute(Attribute):
         super().__init__()
         self.pattern = '[COUNT]'
 
-    def generate_attr(self, obj, noun_mod_occurrences, named_entities_dist):
+    def generate_attr(self, obj: str, noun_mod_occurrences: dict, named_entities_dist: dict):
         objs = {}
         obj_lemma = self.lemmatizer.lemmatize(obj)
 

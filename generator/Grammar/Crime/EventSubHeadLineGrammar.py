@@ -1,10 +1,14 @@
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Object import Object
+from Fact_tree.Phrase import Phrase
 from generator.Grammar.Grammar import Grammar
 
 
 class EventSubHeadLineGrammar(Grammar):
+    """
+    Grammar that adds more to the headline
+    """
     def __init__(self, tense: str, grammar_type: int, metadata: dict = None):
         super().__init__(tense, grammar_type, metadata)
 
@@ -92,12 +96,12 @@ class EventSubHeadLineGrammar(Grammar):
                                 'subj': 'stabbing',
                                 'obj': 'place',
                                 'phrase_mod':
-                                    Object(kind='during', attrs={'obj':
+                                    Phrase(kind='during', attrs={'obj':
                                                                      Object(kind='fight',
                                                                             attrs={
                                                                                 'place': 'nightclub',
                                                                                 'phrase_mod':
-                                                                                    Object(kind='between',
+                                                                                    Phrase(kind='between',
                                                                                            attrs={'obj':
                                                                                                [Object(
                                                                                                    kind='soldier',
