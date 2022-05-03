@@ -10,7 +10,7 @@ class Person(Object):
     """
     Person node in a fact tree
     """
-    def __init__(self, kind: str, neg: bool = False,
+    def __init__(self, kind: Union[str, Attribute], neg: bool = False,
                  attrs: Dict[str, Union[List, int, str, Node, Attribute, Fact]] = None):
         super().__init__(kind, neg, attrs)
 

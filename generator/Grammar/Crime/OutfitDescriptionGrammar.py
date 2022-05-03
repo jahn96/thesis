@@ -4,6 +4,7 @@ from Attributes.AgeAttribute import AgeAttribute
 from Attributes.Attribute import Attribute
 from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
+from Fact_tree.Multiple import Multiple
 from Fact_tree.Object import Object
 from Fact_tree.Person import Person
 from Fact_tree.Phrase import Phrase
@@ -58,7 +59,7 @@ class OutfitDescriptionGrammar(Grammar):
             VIN -> 'for' [1.0]
             """
 
-        if 'ordinal' in self.metadata:
+        if self.metadata and 'ordinal' in self.metadata:
             ordinal = self.num_ordinal_map[self.metadata['ordinal']]
             crime_desc_grammar_1 += f"""
                 VNP3 -> VDT2 VJJ VNN2 [1.0]
@@ -73,7 +74,7 @@ class OutfitDescriptionGrammar(Grammar):
                 VNN2 -> '{self.__obj}'         [1.0]
             """
 
-        if 'ordinal' in self.metadata:
+        if self.metadata and 'ordinal' in self.metadata:
             ordinal = self.num_ordinal_map[self.metadata['ordinal']]
 
             crime_desc_grammar_2 = f"""
@@ -108,7 +109,7 @@ class OutfitDescriptionGrammar(Grammar):
             VNN -> 'description' [1.0]
         """
 
-        if 'ordinal' in self.metadata:
+        if self.metadata and 'ordinal' in self.metadata:
             ordinal = self.num_ordinal_map[self.metadata['ordinal']]
 
             crime_desc_grammar_3 = f"""
@@ -184,7 +185,7 @@ class OutfitDescriptionGrammar(Grammar):
             VNML -> VJJ5 VNNS3             [1.0]
             VADJP2 -> VJJ6                 [1.0]
             
-            VDT -> 'a'                     [1.0]
+            VDT -> '[ARTICLE]'                     [1.0]
             VJJ3 -> '[OBJ_MOD]'              [1.0]
             VNN3 -> 'collar'               [1.0]
             VNNS2 -> 'cuffs'               [1.0]
@@ -206,7 +207,7 @@ class OutfitDescriptionGrammar(Grammar):
                                                                                                         self.num_ordinal_map[
                                                                                                             self.metadata[
                                                                                                                 'ordinal']]
-                                                                                                        if 'ordinal' in self.metadata
+                                                                                                        if self.metadata and 'ordinal' in self.metadata
                                                                                                         else None})})}))
             self.abstract_fact = fact
 
@@ -214,8 +215,8 @@ class OutfitDescriptionGrammar(Grammar):
         elif chosen_idx == 1:
             verb = 'have' if self.tense == 'present' else 'had'
             fact = Fact(subj=Person(kind=self.__obj, attrs={
-                'ordinal': self.num_ordinal_map[self.metadata['ordinal']] if 'ordinal' in self.metadata else None}),
-                        event=Event(kind=self.stemmer.stem(verb), attrs={'subj': self.__obj, 'obj': 'description'}),
+                'ordinal': self.num_ordinal_map[self.metadata['ordinal']] if self.metadata and 'ordinal' in self.metadata else None}),
+                        event=Event(kind=self.morphy(verb, 'verb')),
                         obj=Object(kind='description', neg=True))
             self.abstract_fact = fact
 
@@ -223,31 +224,32 @@ class OutfitDescriptionGrammar(Grammar):
             # TODO: check if we need to have object kind as a part of phrase mod attribute in fact table
             # described as about 70-year old , wearing a zipped jacket with a red collar and cuffs , with skinny jeans and casual shoes.
             verb = 'described'
-            fact = Fact(subj=Person(kind=self.__obj,
+            fact = Fact(subj=Person(kind=self.morphy(self.__obj, 'noun'),
                                     attrs={'ordinal': self.num_ordinal_map[
-                                        self.metadata['ordinal']] if 'ordinal' in self.metadata else None,
+                                        self.metadata['ordinal']] if self.metadata and 'ordinal' in self.metadata else None,
                                            'age': AgeAttribute(),
-                                           'clause_comp': Fact(
-                                               event=Event(kind=self.stemmer.stem('wearing'),
-                                                           attrs={'subj': self.__obj,
-                                                                  'obj': 'jacket',
-                                                                  'phrase_mod': Phrase(kind='with', attrs={'obj': [
-                                                                      Object(kind='jeans',
+                                           'clause_part': Fact(
+                                               subj=Object(kind=self.morphy(self.__obj, 'noun')),
+                                               event=Event(kind=self.morphy('wearing', 'verb'),
+                                                           attrs={
+                                                                  'obj': self.morphy('jacket', 'noun'),
+                                                                  'phrase_mod': Phrase(kind='with', attrs={'obj': Multiple(conj='and', nodes=[
+                                                                      Object(kind=self.morphy('jeans', 'noun'),
                                                                              attrs={'obj_mod': Attribute()}),
-                                                                      Object(kind='shoes',
+                                                                      Object(kind=self.morphy('shoes', 'noun'),
                                                                              attrs={
                                                                                  'obj_mod': Attribute()})
-                                                                  ]})}),
-                                               obj=[Object(kind='jacket', attrs={
+                                                                  ])})}),
+                                               obj=Object(kind=self.morphy('jacket', 'noun'), attrs={
                                                    'obj_mod': Attribute(),
                                                    'phrase_mod': Phrase(kind='with', attrs={'obj':
-                                                                                                [Object(kind='collar',
+                                                                                                Multiple(conj='and', nodes=[Object(kind='collar',
                                                                                                         attrs={
                                                                                                             'obj_mod': Attribute()}),
-                                                                                                 Object(kind=self.lemmatizer.lemmatize('cuffs'))
-                                                                                                 ]})}),
-                                                    ])
+                                                                                                 Object(kind=self.morphy('cuffs', 'noun'))
+                                                                                                 ])})}),
+                                                    )
                                            }),
-                        event=Event(kind=self.stemmer.stem(verb), passive=True, attrs={'subj': self.__obj})) #, 'phrase_mod': Object(kind='as', attrs={'obj': AgeAttribute()})}))
+                        event=Event(kind=self.morphy(verb, 'verb'), passive=True)) #, 'phrase_mod': Object(kind='as', attrs={'obj': AgeAttribute()})}))
             self.abstract_fact = fact
 

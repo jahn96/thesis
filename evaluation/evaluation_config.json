@@ -1,0 +1,16 @@
+{
+  "tau": 0.1,
+  "alpha": 1,
+  "beta": 1,
+
+  "grammar_type": 2,
+
+  "victim_maps": {
+    "1": {},
+    "2": {
+      "soldier": "victim"
+    }
+  },
+  "threshold": 0.8,
+  "pretrained_embedding_path": "./glove.6B.100d.txt"
+}

@@ -4,7 +4,8 @@ import re
 import numpy as np
 
 from Attributes.Attribute import Attribute
-
+from Fact_tree.Fact import Fact
+from nltk.corpus import cmudict  # >>> nltk.download('cmudict')
 
 class FactGenerator:
     """
@@ -14,7 +15,7 @@ class FactGenerator:
         self.nationality_ignore_words = ['islamist', 'sunni', 'kurdish', 'catholic', 'western', 'republican',
                                          'democrat',
                                          'democratic', 'shiite', 'muslim', 'non-muslim', 'islamic', 'christian',
-                                         'instagram',
+                                         'instagram', 'kurd',
                                          'basque', 'buddhist', 'pro-russian', 'communist', 'southern']
         self.NATIONALITY_THRESHOLD = 40
 
@@ -24,7 +25,21 @@ class FactGenerator:
         self.named_entities_dist = self.preprocess_named_entities_dist(named_entities_dist)
         self.noun_mod_occurrences = noun_mod_occurrences
 
-    def generate_random_fact(self, obj: str, attr: Attribute, num_fact: int = 1):
+        self.prev_fact = {}
+
+    def generate_text(self, grammar: str, abstract_fact: Fact, fact_table):
+        pass
+
+    def get_correct_article(self, word):
+        if self.starts_with_vowel_sound(word):
+            return 'an'
+        return 'a'
+
+    def starts_with_vowel_sound(self, word, pronunciations=cmudict.dict()):
+        for syllables in pronunciations.get(word.lower(), []):
+            return syllables[0][-1].isdigit()
+
+    def generate_random_fact(self, obj: str, attr: Attribute, num_fact: int = 1, get_prev = False):
         """
       Params:
       fact_dict: dictionary of mined facts - pairs of facts and their occurrences
@@ -32,6 +47,9 @@ class FactGenerator:
       Return:
       tuple of string - return random fact based on the weights of occurrences
     """
+        if get_prev:
+            return self.prev_fact[attr.pattern]
+
         fact_dict = self.get_fact(obj, attr)
         keys = []
         counts = []
@@ -47,7 +65,9 @@ class FactGenerator:
         )[0]
 
         if type(random_fact) == tuple:
+            self.prev_fact[attr.pattern] = random_fact[0]
             return random_fact[0]
+        self.prev_fact[attr.pattern] = random_fact
         return random_fact
 
     def preprocess_named_entities_dist(self, named_entities_dist):

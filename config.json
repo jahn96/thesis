@@ -1,0 +1,4 @@
+{
+  "model_name": "google/pegasus-cnn_dailymail",
+  "fine_tuned_data": "cnn/dm"
+}

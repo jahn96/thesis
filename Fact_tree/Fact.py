@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 from typing import Union, List, TYPE_CHECKING
+
+from Fact_tree.Multiple import Multiple
+
 if TYPE_CHECKING:
     from Fact_tree.Node import Node
 
@@ -9,9 +12,9 @@ class Fact:
     """
     Fact node in a fact tree
     """
-    def __init__(self, subj: Union[List[Union[Node, Fact]], Node, Fact, str] = None,
-                 event: Node = None,
-                 obj: Union[List[Union[Node, Fact]], Node, Fact, str] = None):
+    def __init__(self, subj: Union[Multiple, Node, Fact, str] = None,
+                 event: Union[Multiple, Node] = None,
+                 obj: Union[Multiple, Node, Fact, str] = None):
         self.__subj = subj
         self.__event = event
         self.__obj = obj

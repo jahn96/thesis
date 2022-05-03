@@ -5,8 +5,8 @@ class MonthAttribute(Attribute):
     """
     Attribute that outputs month attribute
     """
-    def __init__(self):
-        super().__init__()
+    def __init__(self, get_prev=False):
+        super().__init__(get_prev)
         self.pattern = '[MONTH]'
         self.month_facts = {}
 

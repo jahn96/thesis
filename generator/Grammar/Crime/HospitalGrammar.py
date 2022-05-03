@@ -1,0 +1,2 @@
+# TODO:
+# HCSO initially reported "all seven victims suffering from injuries had already been transported from the scene to hospitals by other bystanders" when deputies arrived, according to the update posted online. In later updates, the sheriff's office confirmed an eighth and ninth victim were identified in the shooting incident.

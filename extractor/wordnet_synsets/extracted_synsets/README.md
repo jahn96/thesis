@@ -1,0 +1,1 @@
+This directory contains synsets that are extracted from texts in [NYPOST crime articles dataset](https://www.kaggle.com/datasets/shubhambhakuni/nypost-crime-articles-dataset) using `../../wsd/BERT-WSD/script/wsd_model.py`.

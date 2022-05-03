@@ -1,0 +1,889 @@
+1.
+{'person': {'kind': 'tourist', 'nationality': 'Israeli'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'French'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'the U.S.'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'French', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Israeli', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'neg': True, 'kind': 'description'}}
+{'event': {'subj': 'soldier', 'obj': 'description', 'kind': 'have'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'light-colored', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'big'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '26 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'pink'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'gray', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'heavy'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '59 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Thursday'}}
+{'event': {'subj': 'voice', 'kind': 'tremble'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'two'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+2.
+{'person': {'kind': 'tourist', 'nationality': 'Indian'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'French'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'the U.S.'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'French', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Indian', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'zipped', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'flat'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '50 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'Chinese'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'military', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'black'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'new'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '22 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'pink'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'red', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'flat'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '44 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Charles Manson', 'age': '50 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'upscale'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'July', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'July'}}
+{'event': {'subj': 'Charles Manson', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Tuesday'}}
+{'event': {'subj': 'voice', 'kind': 'tremble'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'two'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+3.
+{'person': {'kind': 'tourist', 'nationality': 'Chinese'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Egyptian'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'Gaza'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Egyptian', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Chinese', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'black'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'salmon-colored', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'heavy'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '38 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'Chinese'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'straight', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'red'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '45 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'red', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'flat'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '48 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Nancy Grace', 'age': '38 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'expensive'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'September', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'September'}}
+{'event': {'subj': 'Nancy Grace', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Friday'}}
+{'event': {'subj': 'voice', 'kind': 'tremble'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'one'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+4.
+{'person': {'kind': 'tourist', 'nationality': 'Russian'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Irish'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'Cambodia'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Irish', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Russian', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'gray', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'heavy'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '22 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'gray', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'black'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'blue'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '41 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'denim', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'iconic'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'Italian'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '44 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Mitt Romney', 'age': '22 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'Crimean'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'August', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'August'}}
+{'event': {'subj': 'Mitt Romney', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'official', 'obj_mod': 'city'}}
+{'person': {'kind': 'people', 'count': 'several', 'age': 'young', 'phrase_mod': 'from area'}}
+{'person': {'kind': 'officers', 'obj_mod': 'police'}}
+{'event': {'subj': 'officers', 'kind': 'respond', 'phrase_mod': 'to scene'}}
+{'event': {'subj': 'they', 'obj': 'people', 'kind': 'saw', 'sub_ord': 'as officers respond'}}
+{'event': {'subj': 'official', 'obj': 'they', 'kind': 'say'}}
+{'event': {'subj': 'people', 'kind': 'flee'}}
+{'event': {'kind': 'get', 'phrase_mod': 'out of there'}}
+{'event': {'subj': 'people', 'kind': 'try', 'phrase_mod': 'to get'}}
+{'person': {'kind': 'people', 'sub_ord': 'who people flee'}}
+{'event': {'subj': 'we', 'obj': 'people', 'kind': 'saw'}}
+{'event': {'subj': 'chief', 'obj': 'we', 'kind': 'say'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Thursday'}}
+{'event': {'subj': 'mom', 'obj': 'tears', 'kind': 'wipe'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'one'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+5.
+{'person': {'kind': 'tourist', 'nationality': 'British'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Chinese'}}
+{'object': {'kind': 'death', 'obj_mod': 'stabbing', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'America'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Chinese', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'British', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'stab', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'red', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'Italian'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '33 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'big', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'black'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '58 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'salmon-colored', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'athletic'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '30 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Sanjay Gupta', 'age': '33 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'expensive'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'September', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'September'}}
+{'event': {'subj': 'Sanjay Gupta', 'passive': True, 'kind': 'stab', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'stab', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Tuesday'}}
+{'event': {'subj': 'mom', 'obj': 'tears', 'kind': 'wipe'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'stab'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'stab', 'passive': True, 'kind': 'happen'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when stab happen'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for stab'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'knife', 'count': 'one'}}
+{'event': {'subj': 'knife', 'passive': True, 'kind': 'use', 'phrase_mod': 'in stab'}}
+{'event': {'subj': 'knife', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+6.
+{'person': {'kind': 'tourist', 'nationality': 'Mexican'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'American'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'the U.S.'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'American', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Mexican', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'red', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'flattering'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'new'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '18 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'zipped', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'big'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '35 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'straight', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'big'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '40 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'John Kerry', 'age': '18 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'upscale'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'September', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'September'}}
+{'event': {'subj': 'John Kerry', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'official', 'obj_mod': 'city'}}
+{'person': {'kind': 'people', 'count': 'several', 'age': 'young', 'phrase_mod': 'from area'}}
+{'person': {'kind': 'officers', 'obj_mod': 'police'}}
+{'event': {'subj': 'officers', 'kind': 'respond', 'phrase_mod': 'to scene'}}
+{'event': {'subj': 'they', 'obj': 'people', 'kind': 'saw', 'sub_ord': 'as officers respond'}}
+{'event': {'subj': 'official', 'obj': 'they', 'kind': 'say'}}
+{'event': {'subj': 'people', 'kind': 'flee'}}
+{'event': {'kind': 'get', 'phrase_mod': 'out of there'}}
+{'event': {'subj': 'people', 'kind': 'try', 'phrase_mod': 'to get'}}
+{'person': {'kind': 'people', 'sub_ord': 'who people flee'}}
+{'event': {'subj': 'we', 'obj': 'people', 'kind': 'saw'}}
+{'event': {'subj': 'chief', 'obj': 'we', 'kind': 'say'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Friday'}}
+{'event': {'subj': 'mom', 'obj': 'tears', 'kind': 'wipe'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'one'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+7.
+{'person': {'kind': 'tourist', 'nationality': 'European'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Syrian'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'Chile'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Syrian', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'European', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'cerulean', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'orthopedic'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '51 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'pink'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'green', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'iconic'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'blue'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '58 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'high'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'famous', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'big'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '22 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Mitt Romney', 'age': '51 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'Portuguese'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'July', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'July'}}
+{'event': {'subj': 'Mitt Romney', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Wednesday'}}
+{'event': {'subj': 'mom', 'obj': 'tears', 'kind': 'wipe'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'two'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+8.
+{'person': {'kind': 'tourist', 'nationality': 'Mexican'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Syrian'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'New Yorks'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Syrian', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Mexican', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'black'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'bright', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'black'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'pink'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '55 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first'}}
+{'object': {'neg': True, 'kind': 'description', 'phrase_mod': 'for tourist'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second'}}
+{'object': {'neg': True, 'kind': 'description', 'phrase_mod': 'for tourist'}}
+{'person': {'kind': 'Cristiano Ronaldo', 'age': '55 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'Mexican'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'January', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'January'}}
+{'event': {'subj': 'Cristiano Ronaldo', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Saturday'}}
+{'event': {'subj': 'voice', 'kind': 'tremble'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'two'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+9.
+{'person': {'kind': 'tourist', 'nationality': 'Australian'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'African-American'}}
+{'object': {'kind': 'death', 'obj_mod': 'shooting', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'Las Vegas'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'African-American', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Australian', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'shooting', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'pink'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'gray', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'blue'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'flat'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '47 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'red'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'big', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'English'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first', 'age': '25 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'object': {'kind': 'collar', 'obj_mod': 'Chinese'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'striped', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'skinny'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'black'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '35 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Edith Windsor', 'age': '47 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'incredible'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'August', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'August'}}
+{'event': {'subj': 'Edith Windsor', 'passive': True, 'kind': 'shoot', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'shoot', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Friday'}}
+{'event': {'subj': 'mom', 'obj': 'tears', 'kind': 'wipe'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'subj': 'shooting', 'kind': 'occur', 'phrase_mod': ['inside structure', 'outside structure']}}
+{'event': {'subj': 'we', 'obj': 'shooting', 'kind': 'have'}}
+{'event': {'subj': 'police', 'obj': 'CNN', 'kind': 'tell', 'day': 'Monday', 'sub_ord': 'that we have'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'object': {'kind': '10', 'obj_mod': 'as many as'}}
+{'object': {'kind': 'round', 'count': '10'}}
+{'person': {'kind': 'people', 'count': 'some'}}
+{'event': {'kind': 'jump out', 'obj': 'windows'}}
+{'event': {'subj': 'round', 'kind': 'prompt', 'obj': 'people', 'phrase_mod': 'to jump out'}}
+{'event': {'subj': 'round', 'passive': True, 'kind': 'fire', 'event_mod': 'inside'}}
+{'event': {'subj': 'news release', 'obj': 'round', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'shooting'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'gunshot', 'passive': True, 'kind': 'fire'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when gunshot fire'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for shooting'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'handgun', 'count': 'two'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'use', 'phrase_mod': 'in shooting'}}
+{'event': {'subj': 'handgun', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+
+10.
+{'person': {'kind': 'tourist', 'nationality': 'Brazilian'}}
+{'object': {'kind': 'years', 'count': '10', 'place': 'prison'}}
+{'person': {'kind': 'soldier', 'nationality': 'Hispanic'}}
+{'object': {'kind': 'death', 'obj_mod': 'stabbing', 'phrase_mod': 'of soldier'}}
+{'object': {'kind': 'brawl', 'obj_mod': 'nightclub', 'location': 'Iran'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'sentence', 'phrase_mod': ['to years', 'over death', 'during brawl']}}
+{'person': {'kind': 'soldier', 'nationality': 'Hispanic', 'count': 'one'}}
+{'person': {'kind': 'tourist', 'nationality': 'Brazilian', 'count': 'two'}}
+{'object': {'kind': 'fight', 'place': 'nightclub', 'phrase_mod': 'between soldier and tourist'}}
+{'event': {'subj': 'stab', 'kind': 'take', 'obj': 'place', 'phrase_mod': 'during fight'}}
+{'object': {'kind': 'collar', 'obj_mod': 'blue'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'denim', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'flattering'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'orthopedic'}}
+{'event': {'subj': 'soldier', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'soldier', 'age': '22 years old'}}
+{'event': {'subj': 'soldier', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'tourist', 'ordinal': 'first'}}
+{'object': {'neg': True, 'kind': 'description'}}
+{'event': {'subj': 'tourist', 'obj': 'description', 'kind': 'have'}}
+{'object': {'kind': 'collar', 'obj_mod': 'Chinese'}}
+{'object': {'kind': 'jacket', 'obj_mod': 'red', 'phrase_mod': 'with collar and cuff'}}
+{'object': {'kind': 'jean', 'obj_mod': 'tight'}}
+{'object': {'kind': 'shoes', 'obj_mod': 'English'}}
+{'event': {'subj': 'tourist', 'obj': 'jacket', 'kind': 'wear', 'phrase_mod': 'with jean and shoes'}}
+{'person': {'kind': 'tourist', 'ordinal': 'second', 'age': '59 years old'}}
+{'event': {'subj': 'tourist', 'passive': True, 'kind': 'describe'}}
+{'person': {'kind': 'Maria Sharapova', 'age': '22 years old'}}
+{'object': {'kind': 'resort', 'obj_mod': 'coastal'}}
+{'object': {'kind': 'nightclub', 'place': 'resort'}}
+{'object': {'kind': 'September', 'obj_mod': 'last'}}
+{'event': {'subj': 'fight', 'kind': 'break out', 'place': 'nightclub', 'month': 'September'}}
+{'event': {'subj': 'Maria Sharapova', 'passive': True, 'kind': 'stab', 'phrase_mod': 'to death', 'sub_ord': 'after fight break out'}}
+{'person': {'kind': 'attorney', 'obj_pos': 'victim'}}
+{'person': {'kind': 'client', 'obj_pos': 'his'}}
+{'event': {'kind': 'bring', 'phrase_mod': 'about trouble'}}
+{'object': {'kind': 'anything', 'phrase_mod': 'to bring'}}
+{'event': {'subj': 'client', 'neg': True, 'kind': 'do', 'obj': 'anything'}}
+{'event': {'subj': 'people', 'obj': 'him', 'kind': 'stab', 'location': 'nightclub'}}
+{'person': {'kind': 'people', 'count': 'two'}}
+{'event': {'subj': 'client', 'passive': True, 'kind': 'attack', 'obj': 'people'}}
+{'event': {'subj': 'attorney', 'obj': 'client', 'kind': 'say', 'day': 'Tuesday'}}
+{'event': {'subj': 'voice', 'kind': 'tremble'}}
+{'event': {'subj': 'mom', 'kind': 'say'}}
+{'event': {'subj': 'fact and circumstances', 'passive': True, 'kind': 'determine', 'event_mod': 'still'}}
+{'event': {'subj': 'police', 'obj': 'fact and circumstances', 'kind': 'say'}}
+{'event': {'kind': 'piece', 'obj': 'everything', 'event_mod': 'together'}}
+{'event': {'subj': 'we', 'kind': 'try', 'phrase_mod': 'to piece'}}
+{'object': {'kind': 'cooperation', 'phrase_mod': 'of public'}}
+{'event': {'kind': 'come', 'event_mod': 'forward'}}
+{'event': {'kind': 'help', 'obj': 'us', 'phrase_mod': 'with investigation'}}
+{'event': {'subj': 'police', 'kind': 'ask', 'phrase_mod_1': 'for cooperation', 'phrase_mod_2': 'to come and help'}}
+{'person': {'kind': 'chief', 'obj_mod': 'police'}}
+{'object': {'kind': 'incident', 'obj_mod': 'heartbreaking'}}
+{'event': {'subj': 'chief', 'obj': 'incident', 'kind': 'call'}}
+{'object': {'kind': 'scene', 'obj_mod': 'crime'}}
+{'object': {'kind': 'evidence', 'phrase_mod': 'from scene'}}
+{'event': {'subj': 'investigator', 'obj': 'evidence', 'kind': 'collect'}}
+{'event': {'subj': 'official', 'obj': 'investigator', 'kind': 'say'}}
+{'event': {'subj': 'witness', 'kind': 'say'}}
+{'event': {'subj': 'what', 'kind': 'lead up', 'obj': 'stab'}}
+{'event': {'subj': 'investigator', 'kind': 'work', 'event_mod': 'still', 'phrase_mod': 'to determine'}}
+{'event': {'subj': 'stab', 'passive': True, 'kind': 'happen'}}
+{'event': {'subj': 'altercation', 'kind': 'occur', 'sub_ord': 'when stab happen'}}
+{'event': {'subj': 'they', 'kind': 'say', 'event_mod': 'however'}}
+{'object': {'kind': 'motive', 'phrase_mod': 'for stab'}}
+{'object': {'kind': 'dispute', 'obj_mod': 'ongoing', 'phrase_mod': 'between suspect and victim'}}
+{'event': {'subj': 'motive', 'passive': True, 'kind': 'connect', 'phrase_mod': 'to dispute'}}
+{'event': {'subj': 'police', 'obj': 'motive', 'kind': 'believe'}}
+{'object': {'kind': 'knife', 'count': 'two'}}
+{'event': {'subj': 'knife', 'passive': True, 'kind': 'use', 'phrase_mod': 'in stab'}}
+{'event': {'subj': 'knife', 'passive': True, 'kind': 'seize'}}
+{'person': {'kind': 'anyone', 'phrase_mod': 'with information'}}
+{'event': {'kind': 'contact', 'obj': 'authorities'}}
+{'event': {'subj': 'anyone', 'passive': True, 'kind': 'asked', 'phrase_mod': 'to contact'}}
+

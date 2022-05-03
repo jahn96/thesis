@@ -7,8 +7,8 @@ class NationalityAttribute(Attribute):
     Attribute that outputs nationality attribute
     """
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, get_prev=False):
+        super().__init__(get_prev)
         self.pattern = '[NATIONALITY]'
         self.nationality = {}
         # words to ignore
