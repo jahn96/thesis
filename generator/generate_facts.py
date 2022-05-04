@@ -362,7 +362,15 @@ def generate_facts_helper(generator: FactGenerator, template_type: int, grammar_
 # TODO: check if the superlative comes with 'the'. Ex, the best
 # TODO: organize schema
 
-def generate_facts(write_to_file=False, print_generated_file=False):
+def generate_facts(num_articles, num_samples, write_to_file=False, print_generated_file=False):
+    """
+
+    :param num_articles: the number of articles to generate
+    :param num_samples: the number of samples to write to a file
+    :param write_to_file:
+    :param print_generated_file:
+    :return:
+    """
     nltk.download('punkt')
     nltk.download('wordnet')
     nltk.download('omw-1.4')
@@ -393,10 +401,10 @@ def generate_facts(write_to_file=False, print_generated_file=False):
     all_tables = []
     start_time = time.time()
 
-    num_articles = 1
+    # num_articles = 1 # the number of articles to generate
     for i in range(num_articles):
-        #grammar_type = random.choice(range(1, 3))
-        grammar_type = 2
+        grammar_type = random.choice(range(1, 3))
+        # grammar_type = 2
         template_type = 1
 
         # metadata_map = {template_type: {grammar_type: metadata}}
@@ -429,7 +437,7 @@ def generate_facts(write_to_file=False, print_generated_file=False):
     print(f"Time it took to generate {num_articles} articles: {time.time() - start_time} seconds.")
 
     if write_to_file:
-        num_samples = 10
+        # num_samples = 10
         random_indices = random.sample(range(0, num_articles), num_samples)
 
         with open('randomly_chosen_articles.txt', 'w') as fw:
@@ -465,4 +473,6 @@ def generate_facts(write_to_file=False, print_generated_file=False):
 
 
 if __name__ == '__main__':
-    generate_facts()
+    num_articles = 100
+    num_samples = 10
+    generate_facts(num_articles, num_samples, write_to_file=True)
