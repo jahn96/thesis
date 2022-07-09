@@ -1,0 +1,16 @@
+name: eval_summ
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.8.9
+  - pip
+  - tensorflow
+  - torch
+  - pandas
+  - pip:
+      - spacy=3.3.0
+      - nltk
+      - tensorflow_datasets
+      - neuralcoref
+      - rouge
