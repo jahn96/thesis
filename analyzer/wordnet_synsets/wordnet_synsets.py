@@ -3,10 +3,10 @@ from nltk.corpus import wordnet as wn
 
 
 def load_synsets():
-    noun_synsets = pickle.load(open("../extractor/wordnet_synsets/extracted_synsets/noun_syns.pickle", "rb"))
-    adj_synsets = pickle.load(open("../extractor/wordnet_synsets/extracted_synsets/adj_syns.pickle", "rb"))
-    verb_synsets = pickle.load(open("../extractor/wordnet_synsets/extracted_synsets/verb_syns.pickle", "rb"))
-    adv_synsets = pickle.load(open("../extractor/wordnet_synsets/extracted_synsets/adv_syns.pickle", "rb"))
+    noun_synsets = pickle.load(open("./analyzer/wordnet_synsets/extracted_synsets/noun_syns.pickle", "rb"))
+    adj_synsets = pickle.load(open("./analyzer/wordnet_synsets/extracted_synsets/adj_syns.pickle", "rb"))
+    verb_synsets = pickle.load(open("./analyzer/wordnet_synsets/extracted_synsets/verb_syns.pickle", "rb"))
+    adv_synsets = pickle.load(open("./analyzer/wordnet_synsets/extracted_synsets/adv_syns.pickle", "rb"))
 
     return noun_synsets, adj_synsets, verb_synsets, adv_synsets
 

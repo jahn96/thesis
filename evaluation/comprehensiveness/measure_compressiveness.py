@@ -8,7 +8,7 @@ def measure_comprehensiveness(table, fact_count):
     comprehensiveness = fact_count / total_fact
     return comprehensiveness
 
-#
+
 # if __name__ == "__main__":
 #     grammar_type = 2
 #

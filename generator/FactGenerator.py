@@ -4,6 +4,7 @@ import re
 import numpy as np
 
 from Attributes.Attribute import Attribute
+from Attributes.NameAttribute import NameAttribute
 from Fact_tree.Fact import Fact
 from nltk.corpus import cmudict  # >>> nltk.download('cmudict')
 
@@ -39,18 +40,7 @@ class FactGenerator:
         for syllables in pronunciations.get(word.lower(), []):
             return syllables[0][-1].isdigit()
 
-    def generate_random_fact(self, obj: str, attr: Attribute, num_fact: int = 1, get_prev = False):
-        """
-      Params:
-      fact_dict: dictionary of mined facts - pairs of facts and their occurrences
-
-      Return:
-      tuple of string - return random fact based on the weights of occurrences
-    """
-        if get_prev:
-            return self.prev_fact[attr.pattern]
-
-        fact_dict = self.get_fact(obj, attr)
+    def get_random_fact(self, fact_dict, num_fact):
         keys = []
         counts = []
         for k, v in fact_dict.items():
@@ -63,10 +53,31 @@ class FactGenerator:
             weights=weights,
             k=num_fact
         )[0]
+        return random_fact
+
+    def generate_random_fact(self, obj: str, attr: Attribute, num_fact: int = 1, get_prev = False):
+        """
+      Params:
+      fact_dict: dictionary of mined facts - pairs of facts and their occurrences
+
+      Return:
+      tuple of string - return random fact based on the weights of occurrences
+    """
+        if get_prev:
+            return self.prev_fact[attr.pattern]
+
+        if isinstance(attr, NameAttribute):
+            first_names, last_names = self.get_fact(obj, attr)
+            random_fact = self.get_random_fact(first_names, num_fact)
+            random_fact += (' ' + self.get_random_fact(last_names, num_fact))
+        else:
+            fact_dict = self.get_fact(obj, attr)
+            random_fact = self.get_random_fact(fact_dict, num_fact)
 
         if type(random_fact) == tuple:
             self.prev_fact[attr.pattern] = random_fact[0]
             return random_fact[0]
+
         self.prev_fact[attr.pattern] = random_fact
         return random_fact
 

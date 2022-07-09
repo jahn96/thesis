@@ -362,7 +362,7 @@ def generate_facts_helper(generator: FactGenerator, template_type: int, grammar_
 # TODO: check if the superlative comes with 'the'. Ex, the best
 # TODO: organize schema
 
-def generate_facts(num_articles, num_samples, write_to_file=False, print_generated_file=False):
+def generate_facts(num_articles, num_samples=10, write_to_file=False, print_generated_file=False):
     """
 
     :param num_articles: the number of articles to generate
@@ -404,7 +404,7 @@ def generate_facts(num_articles, num_samples, write_to_file=False, print_generat
     # num_articles = 1 # the number of articles to generate
     for i in range(num_articles):
         grammar_type = random.choice(range(1, 3))
-        # grammar_type = 2
+        # grammar_type = 1
         template_type = 1
 
         # metadata_map = {template_type: {grammar_type: metadata}}
@@ -444,7 +444,7 @@ def generate_facts(num_articles, num_samples, write_to_file=False, print_generat
             for i in range(len(random_indices)):
                 rand_idx = random_indices[i]
                 article = all_articles[rand_idx]
-                fw.write(str(i + 1) + '. ')
+                fw.write(str(i + 1) + '.\n')
                 fw.write(article + '\n')
                 fw.write('\n')
                 fw.write('\n')
@@ -472,7 +472,7 @@ def generate_facts(num_articles, num_samples, write_to_file=False, print_generat
     # print(articles)
 
 
-if __name__ == '__main__':
-    num_articles = 100
-    num_samples = 10
-    generate_facts(num_articles, num_samples, write_to_file=True)
+# if __name__ == '__main__':
+#     num_articles = 1
+#     num_samples = 10
+#     generate_facts(num_articles, num_samples, write_to_file=False, print_generated_file=True)

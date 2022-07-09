@@ -1,0 +1,389 @@
+,Unnamed: 0,article_num,human_summary,pega_system_summary,bart_system_summary,t5_system_summary,article_texts,pega_rouge1_score,pega_rouge2_score,pega_rougel_score,pega_bleu_score,bart_rouge1_score,bart_rouge2_score,bart_rougel_score,bart_bleu_score,t5_rouge1_score,t5_rouge2_score,t5_rougel_score,t5_bleu_score
+0,28,Article5,Two men were stabbed after a fight broke out in a nightclub. The attorney says that the suspect is not guilty. The reason for the fight could be because of an ongoing dispute between the suspect and victims.,A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.15625,0.027777777777777776,0.15625,3.6003064054048026e-155,0.53125,0.3888888888888889,0.53125,0.29704593147945335,0.15625,0.027777777777777776,0.15625,2.584999388503879e-155
+1,30,Article5,A Chinese Soldier was murdered at a night club during a dispute with two British tourists. The tourist who stabbed the soldier is sentenced to 10 years of jail time. The reasons behind the dispute between three of them is still getting invested by the police. ,A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.325,0.08695652173913043,0.25,0.06861289152387097,0.225,0.021739130434782608,0.2,4.00763430150256e-155,0.325,0.08695652173913043,0.275,0.05398799103284824
+2,31,Article5,"A British tourist stabbed a Chinese soldier in a nightclub, during a fight. He was sentenced to 10 years in prison but the police is still working on the motive behind the stabbing. Anyone who was present that night or with some sort of information is being asked to contact the authorities and help them.",A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.34782608695652173,0.2037037037037037,0.32608695652173914,0.1468989286598294,0.2391304347826087,0.05555555555555555,0.17391304347826086,1.6044078448453014e-78,0.32608695652173914,0.18518518518518517,0.30434782608695654,0.08563252708848423
+3,36,Article3,"Two chinese tourists and an egyption soldier were involved in an altercation/brawl.  The fight esculated and shooting followed, resulting in the death of the soldier.  One of the tourists has been sentenced to 10 years in prison for the shooting.  Police are still trying to piece together what led to the brawl and shooting. ",Police in the US state of Florida are searching for a gunman who shot and killed a woman at a nightclub in the resort town of Turks and Caicos.,"Nancy Grace, 38, was shot to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.",A Chinese tourist has been sentenced to 10 years in prison over the shooting death of a soldier at a nightclub in Gaza.,"A Chinese tourist had been sentenced to 10 years in prison over the shooting death of an Egyptian soldier during a nightclub brawl in Gaza.
+
+The shooting took place during a fight between one Egyptian soldier and two Chinese tourists at this nightclub.
+
+The soldier was described as about 38 years old, wearing a salmon-colored jacket with a black collar and cuffs, with blue jeans and heavy shoes. The first tourist was described as about 45 years old, wearing a straight jacket with a Chinese collar and cuffs, with blue jeans and red shoes. The second tourist was described as about 48 years old, wearing a red jacket with a blue collar and cuffs, with blue jeans and flat shoes.
+
+Nancy Grace, 38 years old, was shot to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Friday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.1794871794871795,0.019230769230769232,0.1794871794871795,1.9443288258097115e-155,0.3333333333333333,0.07692307692307693,0.3076923076923077,2.4794264168189895e-78,0.3333333333333333,0.17307692307692307,0.3333333333333333,0.08257952358713887
+4,40,Article3,"A shooting happened between two Chinese tourists and One Egyptian Soldier during a fight in a nightclub. This shooting happened inside and outside the building, with up to 10 rounds of shots fired. Investigators are trying to figure out what caused the decease of the Egyptian soldier, and prompts witnesses to speak up.",Police in the US state of Florida are searching for a gunman who shot and killed a woman at a nightclub in the resort town of Turks and Caicos.,"Nancy Grace, 38, was shot to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.",A Chinese tourist has been sentenced to 10 years in prison over the shooting death of a soldier at a nightclub in Gaza.,"A Chinese tourist had been sentenced to 10 years in prison over the shooting death of an Egyptian soldier during a nightclub brawl in Gaza.
+
+The shooting took place during a fight between one Egyptian soldier and two Chinese tourists at this nightclub.
+
+The soldier was described as about 38 years old, wearing a salmon-colored jacket with a black collar and cuffs, with blue jeans and heavy shoes. The first tourist was described as about 45 years old, wearing a straight jacket with a Chinese collar and cuffs, with blue jeans and red shoes. The second tourist was described as about 48 years old, wearing a red jacket with a blue collar and cuffs, with blue jeans and flat shoes.
+
+Nancy Grace, 38 years old, was shot to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Friday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.17073170731707318,0.0196078431372549,0.12195121951219512,2.0102320720682456e-155,0.2682926829268293,0.058823529411764705,0.2682926829268293,1.6440862943224302e-78,0.24390243902439024,0.0392156862745098,0.21951219512195122,1.6853118219400427e-155
+5,42,Article5,Two British tourists stabbed a Chinese soldier in a nightclub. The Chinese soldier was 33 whilst the British tourists where 30 and 58. The mother of the soldier was distraught and was crying whilst being interviewed. The police are still looking into the intention of the stabbing.,A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.2903225806451613,0.09523809523809523,0.22580645161290322,1.9433676018203665e-78,0.25806451612903225,0.047619047619047616,0.25806451612903225,1.450654328667829e-78,0.2903225806451613,0.09523809523809523,0.22580645161290322,1.0258012978324661e-78
+6,43,Article5,"A British tourist was sentenced to ten years in prison for stabbing a Chinese soldier to death in an American bar brawl.
+
+The stabbing occurred following a fight at this nightclub between a Chinese soldier and two British visitors.
+
+The soldier was described as being in his late thirties, dressed in a red jacket with a blue collar and cuffs, skinny pants, and Italian shoes. The first traveller was described as being around 58 years old and dressed in a large jacket with blue collar and cuffs, skinny jeans, and black shoes. The second visitor was described as being in his 30s and dressed in a salmon-colored jacket with blue collar and cuffs, blue pants, and athletic shoes.",A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.2459016393442623,0.07777777777777778,0.21311475409836064,8.117711799669215e-79,0.19672131147540983,0.03333333333333333,0.16393442622950818,1.0651055247518524e-155,0.2459016393442623,0.07777777777777778,0.19672131147540983,7.45079238826284e-80
+7,44,Article5,"The article tells a murder case that happened in a nightclub in America. the victim was stabbed to death after a fight broke out and the tragedy has a traumatic impact on the victim's family. although the murderer has been sentenced, the motive behind the stab is still under investigation. ",A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.1951219512195122,0.04,0.1951219512195122,1.7087942322115556e-78,0.4146341463414634,0.32,0.36585365853658536,0.24146506921004934,0.21951219512195122,0.08,0.21951219512195122,0.06413089890290269
+8,46,Article3,An Egyptian soldier called Nancy Grace was shot by a Chinese tourist and died. His mother is suffering. It happened in a nightclub. People were scared and jumped out of windows to escape.,Police in the US state of Florida are searching for a gunman who shot and killed a woman at a nightclub in the resort town of Turks and Caicos.,"Nancy Grace, 38, was shot to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.",A Chinese tourist has been sentenced to 10 years in prison over the shooting death of a soldier at a nightclub in Gaza.,"A Chinese tourist had been sentenced to 10 years in prison over the shooting death of an Egyptian soldier during a nightclub brawl in Gaza.
+
+The shooting took place during a fight between one Egyptian soldier and two Chinese tourists at this nightclub.
+
+The soldier was described as about 38 years old, wearing a salmon-colored jacket with a black collar and cuffs, with blue jeans and heavy shoes. The first tourist was described as about 45 years old, wearing a straight jacket with a Chinese collar and cuffs, with blue jeans and red shoes. The second tourist was described as about 48 years old, wearing a red jacket with a blue collar and cuffs, with blue jeans and flat shoes.
+
+Nancy Grace, 38 years old, was shot to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Friday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.1935483870967742,0.03125,0.1935483870967742,3.76719109467517e-155,0.3225806451612903,0.09375,0.2903225806451613,1.6832080572129794e-78,0.25806451612903225,0.0625,0.1935483870967742,3.786187356021007e-155
+9,48,Article5,"A thirty three year old Chinese soldier was stabbed to death by a British tourist at an American nightclub. The victim, Sanjay Gupta, was stabbed during an altercation between two British tourists aged fifty eight and thirty. The police are asking anyone with information on the event that took place in September to come forward to aid in the investigation.",A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.24,0.034482758620689655,0.16,3.965343739344811e-155,0.28,0.08620689655172414,0.26,0.07492316136881573,0.24,0.034482758620689655,0.18,1.3997572961290236e-155
+10,49,Article1,A shooting occurred at a nightclub in the US. The shooting occurred as a result of a fight between a French soldier and two Israeli tourists. The details of the fight and the shooting are still being determined by police and witnesses are still being urged to come forward with more details. ,Police are searching for an Israeli tourist in connection with the fatal shooting of a French soldier at a nightclub in Miami on Sunday night.,Shooting took place during a fight between one French soldier and two Israeli tourists. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim.,Police are investigating the shooting death of a French soldier in the U.S.,"An Israeli tourist had been sentenced to 10 years in prison over the shooting death of a French soldier during a nightclub brawl in the U.S.
+
+The shooting took place during a fight between one French soldier and two Israeli tourists at this nightclub.
+
+The soldier had no description. The first tourist was described as about 26 years old, wearing a light-colored jacket with a blue-collar and cuffs, with skinny jeans and big shoes. The second tourist was described as about 59 years old, wearing a gray jacket with a pink collar and cuffs, with blue jeans, and heavy shoes.
+
+The victim's attorney said on Thursday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. Two handguns have been seized that were used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.3333333333333333,0.12244897959183673,0.2777777777777778,0.053361944024323864,0.3333333333333333,0.1836734693877551,0.3333333333333333,0.13480128914331319,0.2222222222222222,0.10204081632653061,0.19444444444444445,2.5404054697063488e-79
+11,51,Article3,"A Chinese tourist in Gaza was sentenced to 10 years in prison for killing an Egyptian soldier. No motive for the shooting is known. However, police are still asking from the public if they have any information as to what occurred. The gun used in the shooting has been retrieved.",Police in the US state of Florida are searching for a gunman who shot and killed a woman at a nightclub in the resort town of Turks and Caicos.,"Nancy Grace, 38, was shot to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.",A Chinese tourist has been sentenced to 10 years in prison over the shooting death of a soldier at a nightclub in Gaza.,"A Chinese tourist had been sentenced to 10 years in prison over the shooting death of an Egyptian soldier during a nightclub brawl in Gaza.
+
+The shooting took place during a fight between one Egyptian soldier and two Chinese tourists at this nightclub.
+
+The soldier was described as about 38 years old, wearing a salmon-colored jacket with a black collar and cuffs, with blue jeans and heavy shoes. The first tourist was described as about 45 years old, wearing a straight jacket with a Chinese collar and cuffs, with blue jeans and red shoes. The second tourist was described as about 48 years old, wearing a red jacket with a blue collar and cuffs, with blue jeans and flat shoes.
+
+Nancy Grace, 38 years old, was shot to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Friday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.09302325581395349,0.020833333333333332,0.09302325581395349,1.941578008656433e-155,0.27906976744186046,0.14583333333333334,0.23255813953488372,0.1315515275029985,0.3488372093023256,0.20833333333333334,0.27906976744186046,0.08690126051471816
+12,53,Article5,The article is about a fight that happened in a club in America. A Chinese soldier was stabbed by a British tourist supposedly. Police is still working on the case to figure out what happened. Any information related to the case should be communicated to the police,A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America. A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.,"Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim.",A British tourist has been sentenced to 10 years in prison over the stabbing death of a Chinese soldier at a nightclub in America.,"A British tourist had been sentenced to 10 years in prison over the stabbing death of a Chinese soldier during a nightclub brawl in America.
+
+The stab took place during a fight between one Chinese soldier and two British tourists at this nightclub.
+
+The soldier was described as about 33 years old, wearing a red jacket with a blue collar and cuffs, with skinny jeans and Italian shoes. The first tourist was described as about 58 years old, wearing a big jacket with a blue collar and cuffs, with skinny jeans and black shoes. The second tourist was described as about 30 years old, wearing a salmon-colored jacket with a blue collar and cuffs, with blue jeans and athletic shoes.
+
+Sanjay Gupta, 33 years old, was stabbed to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Tuesday ""my client did not do anything to bring about the trouble and was attacked by two people stabbing at him at the nightclub.""
+
+""Our lives are completely destroyed."", the victim's mom said, wiping tears.
+
+""The facts and circumstances that led up to this stab are still being determined."", police said. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the stab. They, however, said some altercation occurred when the stab happened. Police believe the motive for the stab is connected to an ongoing dispute between the suspect and the victim. One knife has been seized that was used in the stab.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.2702702702702703,0.09090909090909091,0.21621621621621623,0.0715199709391636,0.2702702702702703,0.06818181818181818,0.2702702702702703,5.821596756696341e-155,0.2702702702702703,0.06818181818181818,0.21621621621621623,1.1131986994035284e-78
+13,56,Article1,"A French soldier was fatally shot after two tourists were seen fighting with him at a nightclub. One of the tourists, who is Israeli, has been sentenced to ten years in prison. Police are still looking for more information to determine what caused the violence, as other shootings occurred inside and outside the nightclub.",Police are searching for an Israeli tourist in connection with the fatal shooting of a French soldier at a nightclub in Miami on Sunday night.,Shooting took place during a fight between one French soldier and two Israeli tourists. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim.,Police are investigating the shooting death of a French soldier in the U.S.,"An Israeli tourist had been sentenced to 10 years in prison over the shooting death of a French soldier during a nightclub brawl in the U.S.
+
+The shooting took place during a fight between one French soldier and two Israeli tourists at this nightclub.
+
+The soldier had no description. The first tourist was described as about 26 years old, wearing a light-colored jacket with a blue-collar and cuffs, with skinny jeans and big shoes. The second tourist was described as about 59 years old, wearing a gray jacket with a pink collar and cuffs, with blue jeans, and heavy shoes.
+
+The victim's attorney said on Thursday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. Two handguns have been seized that were used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.24,0.07547169811320754,0.2,8.084969981393454e-79,0.22,0.018867924528301886,0.2,2.957076947944293e-155,0.16,0.03773584905660377,0.12,3.2132482835980104e-156
+14,64,Article1,a tourist from isreal killed a french soldier. it was after a fight in a night club. the victim was shot. t0 shots were fired. no information about the victim.,Police are searching for an Israeli tourist in connection with the fatal shooting of a French soldier at a nightclub in Miami on Sunday night.,Shooting took place during a fight between one French soldier and two Israeli tourists. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim.,Police are investigating the shooting death of a French soldier in the U.S.,"An Israeli tourist had been sentenced to 10 years in prison over the shooting death of a French soldier during a nightclub brawl in the U.S.
+
+The shooting took place during a fight between one French soldier and two Israeli tourists at this nightclub.
+
+The soldier had no description. The first tourist was described as about 26 years old, wearing a light-colored jacket with a blue-collar and cuffs, with skinny jeans and big shoes. The second tourist was described as about 59 years old, wearing a gray jacket with a pink collar and cuffs, with blue jeans, and heavy shoes.
+
+The victim's attorney said on Thursday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. Two handguns have been seized that were used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.25,0.0,0.25,9.59853113677662e-232,0.20833333333333334,0.07142857142857142,0.20833333333333334,1.9203203885662165e-78,0.16666666666666666,0.0,0.16666666666666666,3.289064606845909e-232
+15,66,Article1,The article describes a shooting that occurred in a nightclub in the US. There was an altercation between an Israeli tourist and a French soldier involving two handguns. The soldier died and the Israeli tourist was charged and sentenced to 10 years in prison.,Police are searching for an Israeli tourist in connection with the fatal shooting of a French soldier at a nightclub in Miami on Sunday night.,Shooting took place during a fight between one French soldier and two Israeli tourists. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim.,Police are investigating the shooting death of a French soldier in the U.S.,"An Israeli tourist had been sentenced to 10 years in prison over the shooting death of a French soldier during a nightclub brawl in the U.S.
+
+The shooting took place during a fight between one French soldier and two Israeli tourists at this nightclub.
+
+The soldier had no description. The first tourist was described as about 26 years old, wearing a light-colored jacket with a blue-collar and cuffs, with skinny jeans and big shoes. The second tourist was described as about 59 years old, wearing a gray jacket with a pink collar and cuffs, with blue jeans, and heavy shoes.
+
+The victim's attorney said on Thursday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. Two handguns have been seized that were used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.3225806451612903,0.14285714285714285,0.25806451612903225,1.9058232039715185e-78,0.3548387096774194,0.047619047619047616,0.3548387096774194,4.218565764200243e-155,0.1935483870967742,0.07142857142857142,0.1935483870967742,3.744394717314644e-79
+16,67,Article3,A 38 year old Egyptian soldier has been shot dead in a nightclub in Gaza. The suspects are two Chinese male tourists in their 40's. Multiple gunshots were fired inside and outside the building sending nightclub goers into a panic and witnesses reports suggest that many people jumped out of windows to escape. The investigation is ongoing and police would like anyone with any information to come forward. ,Police in the US state of Florida are searching for a gunman who shot and killed a woman at a nightclub in the resort town of Turks and Caicos.,"Nancy Grace, 38, was shot to death after a fight broke out in a nightclub in the expensive resort last September. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.",A Chinese tourist has been sentenced to 10 years in prison over the shooting death of a soldier at a nightclub in Gaza.,"A Chinese tourist had been sentenced to 10 years in prison over the shooting death of an Egyptian soldier during a nightclub brawl in Gaza.
+
+The shooting took place during a fight between one Egyptian soldier and two Chinese tourists at this nightclub.
+
+The soldier was described as about 38 years old, wearing a salmon-colored jacket with a black collar and cuffs, with blue jeans and heavy shoes. The first tourist was described as about 45 years old, wearing a straight jacket with a Chinese collar and cuffs, with blue jeans and red shoes. The second tourist was described as about 48 years old, wearing a red jacket with a blue collar and cuffs, with blue jeans and flat shoes.
+
+Nancy Grace, 38 years old, was shot to death after a fight broke out in a nightclub in the expensive resort last September.
+
+The victim's attorney said on Friday ""my client did not do anything to bring about the trouble and was attacked by two people shooting at him at the nightclub.""
+
+""This has broken me, not just my spirit, not just my family, but also my mind."", the victim's mom said, her voice trembling.
+
+""The facts and circumstances that led up to this shooting are still being determined."", police said. ""Unfortunately, we had shootings that occurred inside and outside the structure"", the police told CNN on Monday. ""We are trying to piece everything together."" Police are asking for the cooperation of the public to come forward and help us with the investigation. The police chief earlier called the incident heartbreaking. Investigators are collecting evidence from the crime scene, officials said.
+
+""As many as 10 rounds were fired inside, prompting some people to jump out the windows."", the news release said.
+
+""It was scary. We were just trying to get to safety,"" a witness said.
+
+Investigators are still working to determine what led up to the shooting. They, however, said some altercation occurred when gunshots were fired. Police believe the motive for the shooting is connected to an ongoing dispute between the suspect and the victim. One handgun has been seized that was used in the shooting.
+
+Anyone with information was asked to contact the authorities.
+
+
+",0.13114754098360656,0.029411764705882353,0.11475409836065574,5.160964121341413e-79,0.21311475409836064,0.058823529411764705,0.21311475409836064,0.04877337824510834,0.19672131147540983,0.058823529411764705,0.18032786885245902,0.026605614732082596

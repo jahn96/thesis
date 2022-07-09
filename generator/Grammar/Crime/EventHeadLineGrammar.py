@@ -93,8 +93,8 @@ class EventHeadLineGrammar(Grammar):
             abstract_fact = Fact(obj=Person(kind='men', attrs={'count': str(num_criminals)}),
                                  event=Event(kind=verb, passive=True, attrs={
                                      # TODO: check to see if subject and object work without having them passed as attributes
-                                     'subj': 'victim',
-                                     'obj': 'men',
+                                     # 'subj': 'victim',
+                                     # 'obj': 'men',
                                      'day': DayAttribute(),
                                      'time': TimeAttribute(),
                                      'place': Object(kind=event_place,

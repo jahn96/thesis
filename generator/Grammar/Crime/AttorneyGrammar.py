@@ -44,7 +44,7 @@ class AttorneyGrammar(Grammar):
             NP2 -> NPRP NNN3 [1.0]
             VP2 -> VVP VCC VVP2 [1.0]
             
-            NPRP -> '"his' [1.0]
+            NPRP -> '"my' [1.0]
             NNN3 -> 'client' [1.0]
             VVP -> VVBD2 VRB VVP3 [1.0]
             VCC -> 'and' [1.0]
@@ -94,10 +94,10 @@ class AttorneyGrammar(Grammar):
         """
 
         attorney_abstract_fact = Fact(
-            subj=Person(kind=self.morphy('attorney', 'noun'), attrs={'obj_pos': 'victim'}),
+            subj=Person(kind=self.morphy('attorney', 'noun')),
             event=Event(kind=self.morphy('said', 'verb'), attrs={'day': DayAttribute()}),
             obj=Fact(
-                subj=Person(kind=self.morphy('client', 'noun'), attrs={'obj_pos': 'his'}),
+                subj=Person(kind=self.morphy('client', 'noun')),
                 event=Multiple(conj='and',
                                nodes=[Event(kind=self.morphy('do', 'verb'), neg=True, attrs={
                                    'obj': Object(kind='anything', attrs={'phrase_mod': Phrase(kind='to', attrs={

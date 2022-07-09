@@ -38,7 +38,13 @@ def get_inconsistent_facts(extracted_facts):
                 if type(attr[0][0]) == list:
                     attr_val = []
                     for el in attr[0]:
-                        attr_val.append(remove_indices(el[0]))
+                        val = el[0]
+                        is_passive = False
+                        if 'passive' in val:
+                            is_passive = True
+                            val = val.rsplit('_', 1)[0]
+
+                        attr_val.append(remove_indices(val) + ('(passive)' if is_passive else ''))
                     attr_val = ', '.join(attr_val)
                 else:
                     attr_val = attr[0][0]
@@ -60,7 +66,13 @@ def get_consistent_facts(extracted_facts):
                 if type(attr[0][0]) == list:
                     attr_val = []
                     for el in attr[0]:
-                        attr_val.append(remove_indices(el[0]))
+                        val = el[0]
+                        is_passive = False
+                        if 'passive' in val:
+                            is_passive = True
+                            val = val.rsplit('_', 1)[0]
+
+                        attr_val.append(remove_indices(val) + ('(passive)' if is_passive else ''))
                     attr_val = ', '.join(attr_val)
                 else:
                     attr_val = attr[0][0]
@@ -78,7 +90,11 @@ def measure_factual_consistency(noun_modifiers, obj_counter, subj_verb, verb_obj
                                               event_neg, event_modifiers)
 
     inconsistent_facts = get_inconsistent_facts(extracted_facts)
-    print(f"***** Inconsistent facts found: {inconsistent_facts} !!! *****")
+    print()
+    if inconsistent_facts:
+        print(f"***** Inconsistent facts found: {inconsistent_facts} !!! *****")
+    else:
+        print(f"***** Inconsistent facts not found !!! *****")
     print()
 
     consistent_facts = get_consistent_facts(extracted_facts)

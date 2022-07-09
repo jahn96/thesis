@@ -4,7 +4,7 @@ import nltk
 from nltk.corpus import wordnet as wn
 
 from extractor.update_tokenizer import update_tokenizer
-from utils import morphy
+from utils import morphy, be_verbs, months, list_of_places, prepositions, wh_words
 
 
 def preprocess_summary(summary: str):
@@ -33,17 +33,6 @@ def extract_facts_from_summary(summary, nlp):
     event_neg = {}
     subj_verb_obj = {}
     event_modifiers = {}  # also has subordinate clause as its attribute
-    place_list = {
-        'restaurant'}  # https://www.reddit.com/r/DnDBehindTheScreen/comments/3ih4jc/collection_of_place_nouns/
-    months = {'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October',
-              'November', 'December'}
-    be_verbs = {'are', 'were', 'is', 'was', 'am'}
-    wh_words = {'where', 'when', 'why', 'how'}
-    prepositions = {'according to', 'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'at',
-                    'before', 'behind', 'between', 'beyond', 'but', 'by', 'concerning', 'despite', 'down', 'during',
-                    'except', 'following', 'for', 'from', 'in', 'including', 'into', 'like', 'near', 'of', 'off', 'on',
-                    'onto', 'out', 'over', 'past', 'plus', 'since', 'throughout', 'to', 'towards', 'under', 'until',
-                    'up', 'upon', 'up to', 'with', 'within', 'without'}
 
     count_num_map = {
         '1': 'one',
@@ -260,6 +249,17 @@ def extract_facts_from_summary(summary, nlp):
                     subj_verb[head_verb_stem][idx][0][0] += (' ' + conj + ' ' + noun)
                     subj_verb[head_verb_stem][idx][0][1] += (' ' + tok.pos_)
 
+            # passive noun and subj
+            elif tok.head.dep_ == 'nsubjpass':
+                head_verb = tok.head.head.text
+                head_verb_stem = morphy(head_verb, tok.head.head.pos_) + '_' + str(tok.head.head.i)
+
+                if head_verb_stem in subj_verb:
+                    idx = subj_verb[head_verb_stem].index([[head_noun + '_passive', tok.head.pos_], False])
+
+                    subj_verb[head_verb_stem][idx][0][0] += (' ' + conj + ' ' + noun + '_passive')
+                    subj_verb[head_verb_stem][idx][0][1] += (' ' + tok.pos_)
+
             # noun
             if head_noun in noun_modifiers:
                 noun_modifiers[noun] = noun_modifiers[head_noun]
@@ -377,10 +377,10 @@ def extract_facts_from_summary(summary, nlp):
                     i = 2
                     while doc[tok.i + i].dep_ != 'pobj':
                         i += 1
-                    subj = morphy(doc[tok.i + i].text, doc[tok.i + i].pos_) + '_' + str(tok.i + i)
+                    subj = morphy(doc[tok.i + i].text, doc[tok.i + i].pos_) + '_' + str(tok.i + i) + ('' if tok.dep_ == 'nsubj' else '_passive')
                     subj_pos = doc[tok.i + i].pos_
                 else:
-                    subj = morphy(subj, tok.pos_) + '_' + str(tok.i)
+                    subj = morphy(subj, tok.pos_) + '_' + str(tok.i) + ('' if tok.dep_ == 'nsubj' else '_passive')
                     subj_pos = tok.pos_
 
                 if verb_stem in subj_verb:
@@ -416,7 +416,7 @@ def extract_facts_from_summary(summary, nlp):
 
             if tok.head.dep_ == 'conj':
                 other_verb = tok.head.head.text
-                other_verb_stem = morphy(tok.head.head.text, tok.head.head.pos_) + '_' + str(tok.head.head.i)
+                other_verb_stem = morphy(other_verb, tok.head.head.pos_) + '_' + str(tok.head.head.i)
 
                 if other_verb_stem in subj_verb:
                     if other_verb_stem in subj_verb_obj:
@@ -471,27 +471,30 @@ def extract_facts_from_summary(summary, nlp):
         # prepositional complement (preposition + adverbial clause)
         elif tok.dep_ == 'pcomp' and tok.pos_ == 'VERB':
             verb = morphy(tok.text, tok.pos_) + '_' + str(tok.i)
-            subj = subj_verb[verb][-1][0]
-            prep = tok.head.text
-            connective = doc[tok.head.i + 1].text
-            phrase_mod = prep + ' ' + connective + ' ' + subj[0] + ' ' + verb
+            if verb in subj_verb:
+                print(subj_verb)
+                print(verb)
+                subj = subj_verb[verb][-1][0]
+                prep = tok.head.text
+                connective = doc[tok.head.i + 1].text
+                phrase_mod = prep + ' ' + connective + ' ' + subj[0] + ' ' + verb
 
-            # noun phrase modifier
-            if tok.head.head.pos_ == 'NOUN':
-                noun = morphy(tok.head.head.text, tok.head.head.pos_) + '_' + str(tok.head.head.i)
+                # noun phrase modifier
+                if tok.head.head.pos_ == 'NOUN':
+                    noun = morphy(tok.head.head.text, tok.head.head.pos_) + '_' + str(tok.head.head.i)
 
-                if noun in noun_modifiers:
-                    noun_modifiers[noun].append([[phrase_mod, subj[1] + ' ' + tok.pos_], False])
-                else:
-                    noun_modifiers[noun] = [[[phrase_mod, subj[1] + ' ' + tok.pos_], False]]
+                    if noun in noun_modifiers:
+                        noun_modifiers[noun].append([[phrase_mod, subj[1] + ' ' + tok.pos_], False])
+                    else:
+                        noun_modifiers[noun] = [[[phrase_mod, subj[1] + ' ' + tok.pos_], False]]
 
-            elif tok.head.head.head.pos_ == 'NOUN':
-                noun = morphy(tok.head.head.head.text, tok.head.head.head.pos_) + '_' + str(tok.head.head.head.i)
+                elif tok.head.head.head.pos_ == 'NOUN':
+                    noun = morphy(tok.head.head.head.text, tok.head.head.head.pos_) + '_' + str(tok.head.head.head.i)
 
-                if noun in noun_modifiers:
-                    noun_modifiers[noun].append([[phrase_mod, subj[1] + ' ' + tok.pos_], False])
-                else:
-                    noun_modifiers[noun] = [[[phrase_mod, subj[1] + ' ' + tok.pos_], False]]
+                    if noun in noun_modifiers:
+                        noun_modifiers[noun].append([[phrase_mod, subj[1] + ' ' + tok.pos_], False])
+                    else:
+                        noun_modifiers[noun] = [[[phrase_mod, subj[1] + ' ' + tok.pos_], False]]
 
         # preposition object (phrase modifier)
         elif tok.dep_ == 'pobj':
@@ -555,7 +558,7 @@ def extract_facts_from_summary(summary, nlp):
                     # phrase_mod = tok.head.text + ' ' + tok.text
 
                     # if tok.text is a place, then ignore prep
-                    if tok.text in place_list:
+                    if tok.text in list_of_places:
                         phrase_mod = tok.text
                     else:
                         prep = tok.head.text
@@ -784,14 +787,31 @@ def extract_facts_from_summary(summary, nlp):
     return noun_modifiers, obj_counter, subj_verb, verb_obj, subj_verb_obj, noun_neg, event_neg, event_modifiers
 
 
-
 if __name__ == '__main__':
     # !python -m spacy download en_core_web_lg if it's not installed
     nlp = spacy.load('en_core_web_lg')
     summary = """
-        I have more than 10 dollars.
+    Police are investigating the shooting death of a French soldier in the U.S.
     """
     noun_modifiers, obj_counter, subj_verb, verb_obj, subj_verb_obj, noun_neg, event_neg, event_modifiers = extract_facts_from_summary(summary, nlp)
+
+
+    # A det DET soldier stabbed NN
+    # soldier nsubjpass NOUN stabbed stabbed VBN
+    # and cc CCONJ soldier stabbed NN
+    # his poss PRON girlfriend soldier NN
+    # girlfriend conj NOUN soldier stabbed NN
+    # were auxpass AUX stabbed stabbed VBN
+    # stabbed ROOT VERB stabbed stabbed VBN
+    # to prep ADP stabbed stabbed VBN
+    # death pobj NOUN to stabbed IN
+    # in prep ADP stabbed stabbed VBN
+    # a det DET bar in NN
+    # bar pobj NOUN in stabbed IN
+    # by agent ADP stabbed stabbed VBN
+    # two nummod NUM tourists by NNS
+    # tourists pobj NOUN by stabbed IN
+    # . punct PUNCT stabbed stabbed VBN
 
     print(noun_modifiers)
     print(obj_counter)
@@ -801,5 +821,3 @@ if __name__ == '__main__':
     print(noun_neg)
     print(event_neg)
     print(event_modifiers)
-
-    pass

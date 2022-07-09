@@ -1,4 +1,4 @@
 {
-  "model_name": "google/pegasus-cnn_dailymail",
-  "fine_tuned_data": "cnn/dm"
+  "model_name": "aseda/t5-small-finetuned-xsum",
+  "fine_tuned_data": "xsum"
 }

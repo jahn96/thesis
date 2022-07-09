@@ -222,7 +222,7 @@ class CrimeReasonGrammar(Grammar):
             
             NCD -> '{count}' [1.0] 
             NNNS -> '{self.morphy(weapon, 'noun') if count == 'one' else weapon}' [1.0] 
-            VVBP -> 'have' [1.0] 
+            VVBP -> '{'has' if count == 'one' else 'have'}' [1.0] 
             VVP -> VVBN VVP2 [1.0] 
             
             VVBN -> 'been' [1.0] 
@@ -240,7 +240,7 @@ class CrimeReasonGrammar(Grammar):
             S3 -> VP3 [1.0] 
             
             VP3 -> VVBD VVP3 [1.0] 
-            VVBD -> 'were' [1.0] 
+            VVBD -> '{'was' if count == 'one' else 'were'}' [1.0] 
             VVP3 -> VVBN3 VPP [1.0] 
             
             VVBN3 -> 'used' [1.0] 

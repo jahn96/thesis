@@ -400,12 +400,11 @@ class SceneDescriptionGrammar(Grammar):
                                                  'broke' if self.tense == 'past' else 'breaks', 'verb') + ' out',
                                                          attrs={
                                                              'subj': 'fight',
-                                                             'place': Object(kind='nightclub',
-                                                                             attrs={
-                                                                                 'place': Object(kind='resort',
-                                                                                                 attrs={
-                                                                                                     'obj_mod': Attribute()
-                                                                                                 })}),
+                                                             'place': Object(kind='nightclub'),
+                                                             'place_2': Object(kind='resort',
+                                                                               attrs={
+                                                                                   'obj_mod': Attribute()
+                                                                               }),
                                                              'month': Object(kind='',
                                                                              attrs={'kind': MonthAttribute(),
                                                                                     'obj_mod': 'last'})
@@ -559,33 +558,33 @@ class SceneDescriptionGrammar(Grammar):
                                                                                     'clause_rel': Fact(subj=Object(
                                                                                         kind=self.morphy('guns',
                                                                                                          'noun')),
-                                                                                                       event=Event(
-                                                                                                           kind=self.morphy(
-                                                                                                               'fired',
-                                                                                                               'verb'),
-                                                                                                           passive=True,
-                                                                                                           attrs={
-                                                                                                               'event_mod': Multiple(
-                                                                                                                   conj='and',
-                                                                                                                   nodes=[
-                                                                                                                       Modifier(
-                                                                                                                           kind='inside',
-                                                                                                                           attrs={
-                                                                                                                               'phrase_mod': Phrase(
-                                                                                                                                   kind='of',
-                                                                                                                                   attrs={
-                                                                                                                                       'obj': 'home'})}),
-                                                                                                                       Modifier(
-                                                                                                                           kind='outside',
-                                                                                                                           attrs={
-                                                                                                                               'phrase_mod': Phrase(
-                                                                                                                                   kind='of',
-                                                                                                                                   attrs={
-                                                                                                                                       'obj': 'home'})})
-                                                                                                                   ],
-                                                                                                                   attrs={
-                                                                                                                       'mod_mod': 'both'})
-                                                                                                           }))})})})
+                                                                                        event=Event(
+                                                                                            kind=self.morphy(
+                                                                                                'fired',
+                                                                                                'verb'),
+                                                                                            passive=True,
+                                                                                            attrs={
+                                                                                                'event_mod': Multiple(
+                                                                                                    conj='and',
+                                                                                                    nodes=[
+                                                                                                        Modifier(
+                                                                                                            kind='inside',
+                                                                                                            attrs={
+                                                                                                                'phrase_mod': Phrase(
+                                                                                                                    kind='of',
+                                                                                                                    attrs={
+                                                                                                                        'obj': 'home'})}),
+                                                                                                        Modifier(
+                                                                                                            kind='outside',
+                                                                                                            attrs={
+                                                                                                                'phrase_mod': Phrase(
+                                                                                                                    kind='of',
+                                                                                                                    attrs={
+                                                                                                                        'obj': 'home'})})
+                                                                                                    ],
+                                                                                                    attrs={
+                                                                                                        'mod_mod': 'both'})
+                                                                                            }))})})})
                            })})
             )
 

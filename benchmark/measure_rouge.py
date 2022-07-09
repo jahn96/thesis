@@ -11,3 +11,8 @@ def measure_rouge(reference, candidate):
 
     print(scores)
     return scores
+
+if __name__ == '__main__':
+    reference = 'I am on the vacation.'
+    candidate = 'I am not on the vacation.'
+    measure_rouge(reference, candidate)

@@ -8,6 +8,7 @@ from Fact_tree.Event import Event
 from Fact_tree.Fact import Fact
 from Fact_tree.Multiple import Multiple
 from Fact_tree.Node import Node
+from Fact_tree.Object import Object
 from generator.FactGenerator import FactGenerator
 
 
@@ -179,6 +180,11 @@ class CrimeFactGenerator(FactGenerator):
                     grammar, _ = self.traverse_fact_node(grammar, el, fact_table)
                 else:
                     grammar = self.traverse_fact(grammar, el, fact_table, meta_data=meta_data)
+
+            if fact.attrs:
+                kind = (' ' + fact.conj + ' ').join(el.kind for el in fact.nodes)
+                obj = Object(kind=kind, attrs=fact.attrs)
+                self.traverse_fact(grammar, obj, fact_table)
 
         elif isinstance(fact, Node):
             attrs = fact.attrs if fact.attrs else {}
